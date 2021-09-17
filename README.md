@@ -38,7 +38,9 @@ CART PAGE
 > If you go to change vehicle details e.g. add more quantity or change color, or go change shipping details, it will return scroll position to where you were.  
 
 
-NB: There is some code and styles you'll probably advise to have been done differently/better, i also noticed opening the site on mobile (chrome) some few times the page would freeze a bit. Not sure if it was my code, or it's just the phone itself  
+NB:  
+> There is some code and styles you'll probably advise to have been done differently/better, i also noticed opening the site on mobile (chrome) some few times the page would freeze a bit. Not sure if it was my code, or it's just the phone itself  
+> Some of the material and content is not mine, used it only for educational purposes, and i added credit. 
 
 ......................................  
 I think that's just about it  
