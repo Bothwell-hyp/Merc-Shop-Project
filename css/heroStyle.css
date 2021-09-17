@@ -1,0 +1,285 @@
+
+/*---------------------------------ALL PAGES, & BACKGROUND COLOUR ANIMATION-------------------------------------*/
+
+/*background styling*/
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/*interestingly the body has some padding and margin from onset*/
+/*prepare and animate the body colour*/
+body {
+    padding: 0;
+    margin: 0 auto;
+    animation-name: ChangeColours;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/*define the animation*/
+@keyframes ChangeColours {
+    0% {
+        background-color: whitesmoke;
+    }
+
+    50% {
+        background-color: rgb(206, 215, 223);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+
+
+
+/*------------------------------------------------HERO BANNER--------------------------------------------------*/
+
+
+
+/*styling the Hero banner container*/
+#ID_HeroBanner {
+    top: 80px;
+    height: calc(100vh - 80px);
+    background-color: teal;
+    position: relative;
+    border-bottom: 10px solid rgb(141, 135, 150);
+    margin-bottom: 100px;
+}
+
+
+/*Styling for the divs that will be displaying the background images*/
+#ID_HeroBanner .BackgroundDIsplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgb(1, 22, 22);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*corners of bootsrap border class*/
+#ID_HeroBanner .border{
+    border-radius: 5px;
+}
+
+
+/*------------------------------------------ IMAGES CROSSFADING --------------------------------------------------*/
+
+/*Active image div, displayed on top*/
+.Active {
+    z-index: 2;
+}
+
+/*Inactive image div, displayed behind*/
+.InActive {
+    z-index: 1;
+}
+
+
+/*------------------------------------------------ HERO BANNER CONTENT --------------------------------------------------*/
+.row, .col-md{
+padding: 0;
+margin: 0;
+}
+
+/*container for content displayed on the hero banner section*/
+#ID_HeroContent {
+    width: 80%;
+    position: absolute;
+
+    /*Z index to display on top of the 2 alternating background divs, .BackgroundDIsplay*/
+    z-index: 3;
+
+    /*center the items*/
+    margin-left: 33%;
+    margin-top: 20%;
+    transform: translate(-30%, -30%);
+    border-radius: 5px;
+    background-color: rgba(4, 1, 17, 0.493);
+    min-width: 330px;
+}
+
+/*Inside the above styled container (#ID_HeroContent), Left(intro) and right(get started button) had side of the hero info*/
+#HeroIntroSideContainer,
+#HeroGetStartedSideContainer {
+    
+ 
+    position: inherit;
+    left: inherit;
+    margin-top: inherit;
+    font-size: 2rem;
+    padding: 20px 20px;
+
+}
+
+/*prepare the get started container positioning so that the button can be absolutely centered in it*/
+#HeroGetStartedSideContainer {
+    position: relative;
+}
+
+/*styling and centering the get strated button*/
+#HeroGetStartedSideContainer #ID_GetStartedBtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px 0 0;
+    text-transform: uppercase;
+    min-width: 212px;
+    text-align: right;
+    /*lock-in the height for inner image animation*/
+    height: 74px;
+    background-color: teal;
+    border: 1px solid teal;
+}
+
+/*Span with the actual text written in the button*/
+#HeroGetStartedSideContainer #ID_GetStartedBtn span{
+    padding: 0;
+}
+
+/*hover styling of the get strated button*/
+#HeroGetStartedSideContainer #ID_GetStartedBtn:hover {
+    background-color: rgb(13, 100, 100);
+    border: 1px solid rgb(3, 94, 94);
+    transition: 0.4s;
+}
+
+
+/*Styling the images inside the get started button*/
+#HeroGetStartedSideContainer #ID_GetStartedBtn img {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/*styling of the button's devinder image - margin to devide the text from the keyfob image while maintaining height for animation*/
+#HeroGetStartedSideContainer #ID_GetStartedBtn #ID_Devider{
+    margin: 0 10px;
+    border-right: 1px solid skyblue;
+}
+
+/*padding for uniform spacing of elements inside*/
+#ID_HeroContent * {
+    padding: 10px 20px;
+
+}
+
+
+/*Hero header text*/
+#ID_IntroHeading {
+    padding-left: 0;
+    font-size: 2rem;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*Style for visibility*/
+#SiteName {
+    font-weight: 600;
+    color: teal;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+
+/*Style for visibility*/
+#ID_Motto {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: teal;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+    font-size: 18px;
+    min-width: 260px;
+    max-width: 300px;
+}
+
+
+/*------------------------------------------------ MOBILE/SMALLER DISPLAYS --------------------------------------------------*/
+
+/*Catering for Mobile and tablet display*/
+@media (max-width:1000px) {
+
+    /*Change button's possition values for responsive design*/
+    #HeroGetStartedSideContainer #ID_GetStartedBtn {
+        position: initial;
+        left: initial;
+        top: initial;
+        transform: initial;
+    }
+
+    /*align the button above to the centre*/
+    #HeroGetStartedSideContainer {
+        text-align: center;
+    }
+
+    /*set positioning and height for mobile screen sizes*/
+    #ID_HeroContent {
+        margin-left: 32%;
+        margin-top: 25vh;
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+/*Mobile screens*/
+#HeroIntroSideContainer {
+padding-left:0;
+padding-right:0;
+}
+    #ID_HeroContent {
+        margin-left: 29%;
+        margin-top: 25vh;
+
+    }
+
+ 
+#ID_HeroBanner{
+padding-left:10px !important;
+}
+}
+
+/*------------------------------------------------ END OF HERO BANNER STYLING --------------------------------------------------*/
+
+
+
+
+/*--------------------------------UNIVERSAL CLASS THEME FOR STYLING MY BUTTONS IN ALL DOCUMENTS------------------------------------*/
+
+/*Site theme for button's colour */
+.Cls_SiteButtonTheme {
+    background-color: teal;
+    border: 1px solid teal;
+
+}
+
+/*Site theme the button's colour on hover */
+.Cls_SiteButtonTheme:hover {
+    background-color: rgb(13, 100, 100);
+    border: 1px solid rgb(3, 94, 94);
+    transition: 0.4s;
+}
+
+/*Site theme the button's colour after click */
+.Cls_SiteButtonTheme:focus {
+    background-color: teal;
+    border: 1px solid teal;
+}

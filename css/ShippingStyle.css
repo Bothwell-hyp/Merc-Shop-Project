@@ -1,0 +1,333 @@
+/*customize the overal container for everything.*/
+#ID_WholeContainer {
+    background-color: white;
+    padding: 20px 5%;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+/*make hr eleemtn more visible*/
+hr {
+    background-color: rgb(230, 230, 230);
+}
+
+/*----------------------------------------------------------TOP BAR---------------------------------------------------------*/
+
+/*Container for back to catalogue and display mode buttons */
+#TopBarContainer {
+    margin-top: 80px;
+    width: 100%;
+}
+
+
+/*----------------------------------------------------------SLIDER---------------------------------------------------------*/
+
+
+/*Container for Slider and summary*/
+#ID_ImageAndSummaryContainer {
+    margin: 0 4px;
+    color: whitesmoke;
+    object-fit: scale-down;
+    padding: 0;
+    min-width: 300px;
+    border-top: 4px solid teal;
+    border-radius: 5px;
+}
+
+/*----------------------------------------------------- STILL IMAGE  --------------------------------------------------------*/
+
+
+/*styling the Slide container*/
+#Cls_ImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+
+    background-color: teal;
+    border: 1px solid rgb(2, 100, 100);
+    /*margin-bottom: 100px;*/
+    overflow: hidden;
+}
+
+/*Positioning of the image*/
+.Cls_MainImage {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+
+}
+
+
+
+/*----------------------------------------------- SHORT SUMMARY ABOUT SHIPPING --------------------------------------------*/
+
+
+/*summary section */
+#ID_DescriptionContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: teal;
+    margin-bottom: 50px;
+    border-radius: 0 0 5px 5px;
+}
+
+
+/*colour contrasting or visibility*/
+#ID_DescriptionContainer hr {
+    background-color: rgb(90, 158, 158);
+}
+
+/*text formating*/
+.Cls_DescriptionText {
+    text-align: justify;
+}
+
+
+/*-------------------------------------------------------- DELIEVERY & Collection Info ----------------------------------------------------*/
+
+
+/*limit widht for proper display of contents*/
+#ID_DeliveryInfoContainer {
+    min-width: 350px;
+}
+
+
+/*Main selection that determines the Delivery options*/
+.Cls_DeliveryTitle {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+
+    color: teal;
+
+    /*visual stylinig, to blend with its #ID_DeliveryOrCollection below*/
+    width: 250px;
+    margin-bottom: 0;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(235, 230, 230);
+    border-left: 1px solid rgb(189, 189, 189);
+    border-top: 5px solid teal;
+    border-radius: 5px 5px 0 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/*select element > styling and size*/
+#ID_DeliveryOrCollection {
+
+    width: 230px;
+    border-radius: 0px;
+    height: 30px;
+
+    /*visual stylinig, to blend with its .Cls_DeliveryTitle above*/
+    width: 250px;
+    padding: 0 10px 0 10px;
+    background-color: rgb(235, 230, 230);
+    border-radius: 0 0 0 0;
+    border: none;
+    border-top: 1px dotted rgb(145, 141, 141);
+    border-bottom: 1px dotted rgb(145, 141, 141);
+    border-left: 1px solid rgb(189, 189, 189);
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: none;
+    cursor: pointer;
+}
+
+
+/*Alert the user about delivery option and pricing*/
+.Cls_AlertInfo{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    text-align: right;
+}
+
+.Cls_AlertInfo i{
+    color: orange;
+    font-size: 20px;
+}
+
+/*indent the 3 shiiping types*/
+.Cls_DeliveryOptions {
+    padding-left: 40px;
+    text-align: left;
+
+    /*visual stylinig, to blend with its #ID_DeliveryOrCollection below*/
+    border-left: 1px solid rgb(189, 189, 189);
+    border-right: 1px solid rgb(189, 189, 189);
+    display: none;
+}
+
+
+/*-------------------------------------------------- CUSTOMIZE RADIO BUTTONS ----------------------------------------------*/
+
+/*containers of each of the 3 Delivery types*/
+.DeliveryOptionsContainers {
+    display: block;
+}
+
+
+/*Position and style the 3 radio buttons:*/
+.Cls_DeliveryOptions form input {
+    float: left;
+
+    /*remove default radio styling*/
+    appearance: none;
+
+    /*customize appearance*/
+    border-radius: 0;
+    height: 25px;
+    width: 25px;
+    margin: 0 20px 4px 0;
+    border: 1px solid teal;
+    background-color: none;
+    transition: background-color .5s;
+}
+
+.Cls_ErrorNoSelection{
+    border-color: rgb(235, 89, 89);
+}
+
+/*when radio button is checked*/
+.Cls_DeliveryOptions form input:checked {
+    background-color: teal;
+    transition: background-color .5s;
+    padding: 2px;
+    background-clip: content-box;
+}
+
+
+/*-------------------------------------------------- CUSTOMIZE LABELS  ----------------------------------------------*/
+
+/*Positioning and customizing appearance of labels of the 3 radio buttons*/
+.Cls_DeliveryOptions form label {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 55px);
+    /*occupy the whole width minus the widht and margin of the radio button on its left*/
+
+    background-color: rgb(233, 233, 233);
+    border: 1px solid rgb(120, 180, 180);
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+/*head styling for span inside label*/
+#ID_DeliveryInfoContainer .Cls_DeliveryOptions label span {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    color: white;
+    font-weight: 500;
+    background-color: teal;
+}
+
+/*ul element inside label*/
+#ID_DeliveryInfoContainer .Cls_DeliveryOptions ul {
+    background-color: rgb(231, 233, 240);
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 25px 25px 25px;
+    text-align: justify;
+}
+
+.DeliveryDescription {
+    display: none;
+}
+
+/*-------------------------------------------------- Divider Divs  ----------------------------------------------*/
+
+/*visual styling to aid userfriendliness during animation of delivery options*/
+#ID_UpperDividerDiv {
+    height: 12px;
+    width: 100%;
+    background-color: rgb(235, 230, 230);
+    border-left: 1px solid rgb(189, 189, 189);
+    border-right: 1px solid rgb(189, 189, 189);
+}
+
+/*visual styling to aid userfriendliness during animation of delivery options*/
+#ID_LowerDividerDiv {
+    height: 0px;
+    width: 100%;
+    background-color: rgb(235, 230, 230);
+    border-bottom: 4px solid rgb(189, 189, 189);
+    border-left: 1px solid rgb(189, 189, 189);
+}
+
+
+
+
+/*-------------------------------------------------- PURCHASER's DETAILS  ----------------------------------------------*/
+
+/*Container div with boardering around input elemtns except for button, but all inside form*/
+#ID_PurchaserDetailsDiv {
+    border: 1px solid rgb(177, 177, 177);
+    padding: 20px;
+    position: relative;
+}
+
+/*Purchaser's details div*/
+#ID_PurchaserDetailsForm {
+    min-height: 35vh;
+}
+
+
+/*Dimensions and spacing of input fields */
+#ID_PurchaserDetailsForm input {
+    width: 40%;
+    margin: 7px 0;
+    min-width: 200px;
+}
+
+/*Textarea for more info/notes*/
+#ID_PurchaserNotes {
+    resize: vertical;
+    margin: 7px 0;
+    width: 100%;
+    min-width: 250px;
+    min-height: 100px;
+}
+
+/*position and placing of button*/
+#ID_SubmitDeliveryDetails {
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+
+/*--------------------------------------------------FOOTER-----------------------------------------------------*/
+
+
+/*Styling for the footer*/
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    color: lightslategray;
+}
+
+/*-------------ALERT USER ON PRICING AND CATER FOR DISPLAY OPTIONS ON MOBILE---------*/
+
+.fa-exclamation-circle{
+    cursor: pointer;
+    transform: scale(1);
+}
+
+/*smaller mobile screens*/
+@media (max-width:450px) {
+    
+.Cls_AlertInfo *:not(.fa-exclamation-circle){
+    display: none;
+}
+/*since the rest is hidden above, increase size of icon*/
+.fa-exclamation-circle{
+transform: scale(1.5);
+}
+}

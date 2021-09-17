@@ -1,0 +1,356 @@
+/*customize the overal container for everything.*/
+#ID_WholeDetailsContainer {
+    background-color: white;
+    transition: background-color 1s;
+    padding: 20px 5%;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+
+/*----------------------------------------------------------TOP BAR---------------------------------------------------------*/
+
+/*Container for back to catalogue and display mode buttons */
+#TopBarContainer {
+    margin-top: 80px;
+    width: 100%;
+}
+
+/*Back to Catalogue button Button*/
+#ID_BackToCatalogueBtn {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+}
+
+/*Display theme buttons*/
+#ID_ThemeButtons {
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    padding: 5px 0;
+    background-color: teal;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+/*text*/
+#ID_ThemeButtons span {
+    margin-right: 5px;
+    cursor: default;
+    color: white;
+    font-weight: 400;
+}
+
+/*customize the icons*/
+#ID_ThemeButtons i {
+    cursor: pointer;
+    transform: scale(1);
+    transition: .5s;
+    border-radius: 100%;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+/*Light mode icon*/
+#ID_ThemeButtons .Light {
+    color: honeydew;
+}
+
+/*dimmed mode icon*/
+#ID_ThemeButtons .Dim {
+    color: grey;
+}
+
+/*Dark mode icon*/
+#ID_ThemeButtons .Dark {
+    color: black;
+}
+
+/*Hover effect*/
+#ID_ThemeButtons *:hover {
+    transform: scale(1.3);
+    transition: .5s;
+}
+
+
+
+/*--------------------------------------IMAGE SLIDER AND DESCRIPTION SIDE------------------------------------------*/
+
+
+/*Container for Slider and summary*/
+#ID_SlideAndSummaryPanel {
+    margin: 0 4px;
+    color: whitesmoke;
+    object-fit: scale-down;
+    padding: 0;
+    min-width: 250px;
+    border-top: 4px solid teal;
+    border-radius: 5px;
+    /*max-width: 310px;*/
+}
+
+/*----------------------------------------------------- IMAGE SLIDER --------------------------------------------------------*/
+
+
+/*styling the Slide container*/
+#ID_SlideContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+
+    background-color: rgb(109, 93, 93);
+    border: 1px solid rgb(2, 100, 100);
+    /*margin-bottom: 100px;*/
+    overflow: hidden;
+}
+
+/*Positioning of the animated image(s)*/
+.Cls_SlideImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+/*The Next and Prev icons as buttons*/
+.SlideButtons {
+    position: absolute;
+    font-size: 40px;
+    color: rgb(223, 233, 233);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .5s;
+    border: 2px solid rgba(220, 225, 241, 0.5);
+    border-radius: 100%;
+    opacity: 60%;
+
+}
+
+/*Positionoing of Next*/
+#ID_NextImage {
+    right: 10px;
+    bottom: 50%;
+}
+
+/*Positioning of Prev*/
+#ID_PrevImage {
+    left: 10px;
+    bottom: 50%;
+}
+
+/*Hoever effect to enhance user interaction and intuitiveness*/
+.SlideButtons:hover {
+    border: 2px solid rgba(220, 225, 241, 0.8);
+    transform: scale(1.2);
+    opacity: 100%;
+    transition: .5s;
+}
+
+/*Container for position markers*/
+.Slide_PositionMarkers_Container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    /*background-color: rgba(48, 47, 47, 0.2);*/
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+/*Setting to allow only the current position to be emphasized over the others*/
+.Slide_PositionMarkers_Container * {
+    opacity: 40%;
+}
+
+/*Class for indicating which position the slider is at*/
+.CurrentPosition {
+    opacity: 80%;
+}
+
+
+
+/*--------------------------------------------- IN CART VISUAL INDICATIONS---------------------------------------------*/
+
+/*Visual indication if a car is in the cart*/
+.Cls_IsVehicleInCart{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+}
+
+/*Visual indication if a car is in the cart*/
+.Cls_VehicleAddedToCart{
+    opacity: 0.7;
+    visibility: visible;
+    transition: visibility .5s;
+}
+
+
+
+/*----------------------------------------------- VEHICLE SHORT DESCRIPTION --------------------------------------------*/
+
+/*Styling for details preview part of the car images */
+#ID_DescriptionContainer {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    background-color: teal;
+    margin-bottom: 50px;
+    border-radius: 0 0 5px 5px;
+}
+
+
+/*styling for the cars names*/
+.Cls_CarNameSmall {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/*colour contrasting or visibility*/
+#ID_DescriptionContainer hr {
+    background-color: rgb(90, 158, 158);
+}
+
+
+/*------------------------------------------------------------VEHICLE INFO ----------------------------------------------------*/
+
+
+/*Car's year category*/
+.Cls_CarNameHeading {
+    display: inline-block;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: teal;
+}
+
+/*Colour for the Price text*/
+.Cls_Price{
+    color: teal; /*Colour suitable for all display modes*/
+}
+
+/*Model, engine, year, etc*/
+.Cls_CarInfo {
+    padding-left: 40px;
+    text-align: left;
+}
+
+/*use span widht to align text*/
+#ID_VehicleInfoContainer .Cls_CarInfo span {
+    display: inline-block;
+    min-width: 80px;
+    font-weight: 600;
+}
+
+
+
+/*------------------------------------------ ADDING TO CART -------------------------------------------------*/
+
+
+
+/*Container for adding to cart, plus background colour with opacity - making it easy for Dark/Light theme*/
+#AddingToCart {
+    min-height: 35vh;
+    margin-left: 40px;
+    padding: 20px;
+    padding-left: 80px;
+    /*Transparency keeps border visible ina ll display modes*/
+    border: 1px solid rgba(184, 176, 176, 0.705);
+    border-radius: 4px;
+}
+
+/*min width for easy alignment*/
+#AddingToCart p span {
+    display: inline-block;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+/*style the appearance of the select for colour options*/
+#AddingToCart select {
+    background-color: white;
+    border: 1px solid rgb(139, 139, 139);
+    width: 120px;
+    border-radius: 3px;
+    height: 30px;
+}
+
+/*text fields*/
+#AddingToCart input {
+    width: 120px;
+}
+
+/*button styling*/
+#AddingToCart button {
+    margin-leftR: 100px;
+    margin-top: 8px;
+}
+
+/*custimize the more details button*/
+.btn-outline-light {
+    border-radius: 0;
+}
+
+/*custimize the more details button on hover*/
+.btn-outline-light:hover {
+    background-color: rgb(183, 206, 206);
+    border: 1px solid rgb(183, 206, 206);
+}
+/*vehicle desription*/
+.Cls_DescriptionText {
+    text-align: justify;
+}
+
+
+
+/*--------------------------------------------------FOOTER-----------------------------------------------------*/
+
+
+/*Styling for the footer*/
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    color: lightslategray;
+}
+
+
+/*--------------------------------------------------DISPLAY MODES COLOURS-----------------------------------------------------*/
+
+/*Color contrast for text visibility*/
+.ColorForLighMode{
+    color: black;
+}
+
+/*Color contrast for text visibility*/
+.ColorForDimMode{
+    color: black;
+}
+
+/*Color contrast for text visibility*/
+.ColorForDarkMode{
+    color: rgb(138, 135, 135);
+}
+
+/*horizontal lines*/
+.Cls_HRColour{
+    background-color: rgba(183, 187, 201, 0.699);;
+}
+
+/*Adjust for space on smaller mobile displays*/
+@media (max-width:600px) {
+    #ReturnToPageBtn{
+        padding-left: 2px;
+        padding-right: 6px;
+    }
+}

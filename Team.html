@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title> The Team</title>
+    <meta charset="utf-8">
+    <!--font awesome Icons-->
+    <script src="https://kit.fontawesome.com/b69c959b3b.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome - make it load quicker - Got this from: https://stackoverflow.com/a/35880730/16333159-->
+    <link href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' rel='stylesheet' type='text/css'>
+    <!--Resposive meta, cater for mobile viewports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Link to current bootstrap 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Stylesheet local-->
+    <link type="text/css" rel="stylesheet" href="css/navStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/heroStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/TeamStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/GetInTouchStyle.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+    <!--MAIN NAVIGATION MENU START-->
+    <nav>
+        <!--text in span meant for mobile displays, for intuitive navigation-->
+        <label id="ID_Logo" title="Click on logo go to home page">Merc-Shop<span> - Our Team</span> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="Cls_active"><a href="Team.html">Our team</a></li>
+            <li><a href="Catalogue.html"><i class="far fa-check-circle Cls_CatalogueProgressIcon"></i> Catalogue</a>
+            </li>
+            <li><a href="Shipping.html"><i class="far fa-check-circle Cls_ShippingProgressIcon"></i> Shipping</a></li>
+            <!-- Gap between </i> <span> below is intentional, insteaad of using margin in css-->
+            <li id="ID_CartMenu" title="Cart Total: R0.00"><a href="Cart.html"> <i
+                        class="far fa-check-circle Cls_OrderConfirmProgressIcon"></i> <i
+                        class="fas fa-shopping-cart"></i>
+                    <span>Cart ..</span></a></li>
+
+        </ul>
+        <label id="ID_MobileMenu">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <!--MAIN NAVIGATION MENU END-->
+
+
+
+    <!--HERO BANNER SECTION START-->
+    <section id="ID_HeroBanner">
+        <div class="BackgroundDIsplay Active"></div>
+        <div class="BackgroundDIsplay InActive"></div>
+
+        <div id="ID_HeroContent">
+            <div class="row">
+
+                <div class="col-md" id="HeroIntroSideContainer">
+                    <div class="border">
+                        <h1 id="ID_IntroHeading">You Deserve <br>Nothing Less.</h1>
+                        <h4 id="SiteName">The Merc-shop</h4>
+                        <p id="ID_Motto">For the merc treats & delights.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md" id="HeroGetStartedSideContainer">
+                    <div>
+                        <!--the divider image is to maintain margin and height for the keyfob animation-->
+                        <button id="ID_GetStartedBtn" class="btn btn-primary" title="Order your own merc today."
+                            onclick="location.href='Catalogue.html';">
+                            <img src="images/keyfob.png"><img id="ID_Devider" src="images/devider.png">
+                            <span>Get Started</span></button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--HERO BANNER SECTION END-->
+
+
+
+    <!-- MAIN CONTENT SIDE + SIDE BAR ON LAST ROW -->
+    <section class="container justify-content-center">
+        <div class="row">
+
+            <!-- START MAIN CONTENT SIDE-->
+            <div class="col-md-9">
+
+
+                <!-- INTERNATIONAL TEAM FIRST TOP-->
+                <div class="row" id="ID_IntlTeam">
+                    <div class="col ScaleAnimContainer">
+                        <img src="images/team-banner.jpg" alt="Our international team" class="ScaleAnim">
+                    </div>
+                    <!--place outside column for the zoom transfom and overflow that's gonna happen inside col-->
+                    <p> Our International Team: showroom and online teams from around the world.</p>
+                </div>
+
+
+                <!-- Team Text And Joburg Team-->
+                <div class="justify-content-center" id="ID_TeamTextAndJoburgTeam">
+                    <div class="row">
+
+                        <!--Left Side with text-->
+                        <div class="col-md" id="ID_TeamTextSide">
+
+                            <p id="ID_TeamText"> Our regularly trained and well informed teams are the envy
+                                of almost every showroom there is. Not only can they advice on any particular detail,
+                                engine, speed, traction, price, interior design, etc, our teams are also fully able to
+                                help you customise your merc to your own unique tests. Some of them are top and highly
+                                qualified
+                                engineers and designers. <span id="ID_Dots">...</span>
+                                <span id="ID_MoreToBeDisplayed"> Some have financial backgrounds, and
+                                    some if not all, have driven some of the finest Mercs ever to roam our roads. So,
+                                    they have firsthand and immersive knowledge to deliver you nothing less
+                                    than your prime expectations and luxury desires. </span>
+                                <br><br>
+                                <button id="ID_MoreButton" class="btn btn-outline-light" title="Read full passage">Read
+                                    more/less</button>
+                                <br>
+
+                                <p id="ID_GetInTouchText"> Visit our <a title="Visit our catalogue"
+                                        href="Catalogue.html">CATALOGUE</a> to
+                                    see what's making top of international lists! You can Get In Touch with us or let our sales team contact you and have a word with you about
+                                    these ultimate masterpieces of the tarmac.</p>
+                            </p>
+
+                        </div>
+                        <div class="col-md">
+                            <!--Right Side with block text-->
+                            <div id="ID_TeamImageContainer" class="ScaleAnimContainer">
+                                <img src="images/Joburg-team.jpg" id="ID_JoburgTeamImage" alt="Johannesburg Team"
+                                    class="ScaleAnim">
+                                <div id="ID_JHBTeamTextBlock">
+                                    <p> <small>AT YOUR SERVICE <br> Your Renowned Johannesburg Team</small></p>
+                                </div>
+                            </div>
+                        </div> <!-- closing tag for half of Right Side-->
+                    </div>
+                </div>
+
+                <!-- LAST 2 BOTTOM 2 Boxes-->
+                <section id="LowerSection">
+                    <article id="ID_TeamMemberImage1" class="ScaleAnimContainer">
+                        <!-- Image of team member showcasing a car-->
+                        <img src="images/Team-image1.jpg" class="img-fluid ScaleAnim" alt="Tina Showcasing a merc">
+                        <div class="Cls_TextBlock">
+                            <p> <small> <b>Tina M. </b><br> Showcasing a masterpiece </small></p>
+                        </div>
+
+                    </article>
+                    <article id="ID_TeamMemberImage2" class="ScaleAnimContainer">
+                        <!-- Image of team member showcasing a car-->
+                        <img src="images/Team-image2.jpg" class="img-fluid ScaleAnim" alt="Tina Showcasing a merc">
+                        <div class="Cls_TextBlock">
+                            <p> <small> <b>Tina M. </b><br> Showcasing a masterpiece </small></p>
+                        </div>
+                    </article>
+
+                </section> <!-- CLOSE LAST 2 BOTTOM 2 Boxes-->
+
+            </div> <!-- CLOSE CONTENT (LEFT SIDE)-->
+
+            <!--RIGHT HAND SIDE, SIDE BAR-->
+            <section class="col-md-3" id="ID_SideBar">
+                <!-- START SIDE BAR-->
+                <!-- Add a single testimonial in side bar-->
+                <div id="ID_Testimonial">
+                    <img src="images/Testimonial-John.jpg" class="img-fluid" alt="John's Testimonial">
+                    <h5>John Webber</h5>
+                    <p>"To me comfort is everything, everything else comes as an extra icing to my cake. The Merc-shop
+                        team
+                        sure knows how to do my cake, time and time again. It's been more than 2 decades now, and my
+                        loyalty to them has never been disappointed. I'd recommend them any time."
+                    </p>
+                </div>
+            </section> <!-- CLOSE RIGHT HAND SIDE, SIDE BAR-->
+
+
+
+        </div><!-- CLOSE MAIN ROW-->
+    </section> <!-- CLOSE MAIN CONTENT & SIDEBAR CONTAINER, M-->
+
+    <!--GET IN TOUCH PANEL-->
+    <section id="ID_GetInTouchPanel" class="shadow" hidden>
+        <!--The preveiw part-->
+        <div id="ID_Standby">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <p>Get In Touch</p>
+        </div>
+
+        <!--Display contact details and form in full when user clicks-->
+        <div id="ID_ContactContainer">
+            <div id="ID_OurContactDetails">
+                <h6>GET IN TOUCH: </h6>
+                <p>
+                    <i class="fas fa-phone-alt"></i> <span id="ID_OurTel" title="Click to call us now">(+27) 011 001 001
+                    </span><br>
+                    <i class="fas fa-envelope"></i> <span id="ID_OurEmail"
+                        title="Click to email us now">sales@merc-shop.co.za</span> <br>
+                    <i class="fas fa-map-marker-alt"></i> <span id="ID_OurAddress">2 Merc Dr, Parkmore, JHB</span> <br>
+                </p>
+            </div>
+
+            <!--Display contact details and form in full when user clicks-->
+            <form id="ID_YourContactDetails">
+                <h6>Or Let us call you back</h6>
+                <input type="text" id="GetInTouchName" placeholder="Fullname" maxlength="50" required><br>
+                <input type="tel" id="GetInTouchPhone" placeholder="Phone number" maxlength="50" required><br>
+                <input type="email" id="GetInTouchEmail" placeholder="Email" maxlength="50" required><br>
+                <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">Submit</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger" id="ID_GetInTouchCloseBtn">Close</button>
+            </form>
+        </div>
+    </section>
+    <!--GET IN TOUCH PANEL END-->
+
+
+    <footer>
+        <br>
+        <button id="ID_BackToTop" class="btn btn-outline-warning"><i class="fas fa-chevron-up"></i> Back to top
+        </button>
+        <br><br>
+        <p><small>
+                &copy; The Merc-shop, Johannesburg, South Africa. All Rights Reserved. <br>
+                Tel: (+27) 011 000 0000 | Email: info@themercshop.co.za | Social Media: @TheMerc-Shop <br>
+                <a href="mailto:bothwell.hyp@gmail.com">Created by Bothwell Dzawoma</a> <br>
+                Level 1 Capstone Project: Last updated 09 Sep 2021. <br>
+                <a href="credits.html" target="_blank">Credits to content used in this project</a>
+            </small>
+        </p>
+    </footer>
+
+
+    <!--JS local-->
+    <script src="js/NavHeroFooterScript.js"></script>
+    <script src="js/MainCartScript.js"></script>
+    <script src="js/TeamScript.js"></script>
+    <script src="js/GetInTouchScript.js"></script>
+</body>
+
+</html>

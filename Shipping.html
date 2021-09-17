@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shipping</title>
+
+    <meta charset="utf-8">
+    <!--font awesome Icons-->
+    <script src="https://kit.fontawesome.com/b69c959b3b.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome - make it load quicker - Got this from: https://stackoverflow.com/a/35880730/16333159-->
+    <link href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' rel='stylesheet' type='text/css'>
+    <!--Resposive meta, cater for mobile viewports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Link to current bootstrap 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Stylesheet local-->
+    <link type="text/css" rel="stylesheet" href="css/navStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/heroStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/ShippingStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/GetInTouchStyle.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+
+    <!--MAIN NAVIGATION MENU START-->
+    <nav>
+        <!--text in span meant for mobile displays, for intuitive navigation-->
+        <label id="ID_Logo" title="Click on logo go to home page">Merc-Shop<span> - Shipping</span> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Team.html">Our team</a></li>
+            <li><a href="Catalogue.html"><i class="far fa-check-circle Cls_CatalogueProgressIcon"></i> Catalogue</a>
+            </li>
+            <li class="Cls_active"><a href="Shipping.html"><i class="far fa-check-circle Cls_ShippingProgressIcon"></i>
+                    Shipping</a></li>
+            <!-- Gap between </i> <span> below is intentional, insteaad of using margin in css-->
+            <li id="ID_CartMenu" title="Cart Total: R0.00"><a href="Cart.html"> <i
+                        class="far fa-check-circle Cls_OrderConfirmProgressIcon"></i> <i
+                        class="fas fa-shopping-cart"></i>
+                    <span>Cart ..</span></a></li>
+        </ul>
+        <label id="ID_MobileMenu">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <!--MAIN NAVIGATION MENU END-->
+
+
+
+
+
+    <!--MAIN PAGE CONTENT-->
+    <section id="ID_WholeContainer">
+
+        <!--Back to catalogue button and page display theme options-->
+        <div id="TopBarContainer">
+            <h4 id="ID_Header"> Shipping</h4>
+        </div>
+        <hr class="Cls_HRColour">
+
+
+
+        <!-- 1st row-->
+        <section class="row justify-content-center">
+
+            <!--1st Col-->
+            <div class="col-md-4" id="ID_ImageAndSummaryContainer">
+                <div>
+                    <!--Image-->
+                    <div id="Cls_ImageContainer">
+                        <img class="Cls_MainImage" src="images/merc-loading.jpg" alt="">
+                    </div>
+                </div>
+
+                <!--Summary-->
+                <div class="p-3" id="ID_DescriptionContainer">
+                    <h5>BRINGING IT HOME:</h5>
+                    <hr>
+                    <p class="Cls_DescriptionText">
+                        Over the years and with the ever increasing cargo innovations and options, we have streamlined
+                        the process to make it smooth and seamless. Most of our special clients receive their mercs via
+                        airfreight or by shipping. This often takes from as little as a few days, to nothing more than a
+                        month. </p>
+
+                </div>
+
+            </div>
+
+            <!--2nd Col-->
+            <div class="col-sm" id="ID_DeliveryInfoContainer">
+                <form id="ID_CollectionOrDelivery">
+
+                    <h4 class="Cls_DeliveryTitle">Delivery or collection?</h4>
+                    <select name="Delivery" id="ID_DeliveryOrCollection">
+                        <!--acting as placeholder-->
+                        <option value="Not selected" selected hidden>Click here to select your option</option>
+                        <option value="Delivery">DELIVERY</option>
+                        <option value="Collection">COLLECTION</option>
+                    </select>
+
+                    <!--Alert the user about pricing and -->
+                    <div class="Cls_AlertInfo">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span> <small> Cost is per each vehicle. <br>
+                                Delivery option applies to all. </small></span>
+                    </div>
+
+                    <!--This 1st Divider Div provides visual aid to the opening and closing of the delivery/collection option-->
+                    <div id="ID_UpperDividerDiv"> </div>
+                </form>
+
+                <!-- Delivery options-->
+                <div class="Cls_DeliveryOptions">
+                    <form id="DeliveryOptions">
+                        <!--PREMIUM Delivery-->
+                        <div class="DeliveryOptionsContainers">
+                            <br>
+                            <input type="radio" name="DeliveryOptionCheck" id="ID_PremiumDelivery"
+                                value="Premium Delivery">
+                            <label for="ID_PremiumDelivery"><span>Premium Delivery (R 12 500)</span>
+                                <div class="DeliveryDescription">
+                                    <ul>
+                                        <br>
+                                        <li>Instant Delivery in select regions, you can expect delivery on the same day
+                                            or after.</li>
+                                        <li> Get a direct and 24/7 access line of contact for updates/enquiries on your
+                                            delivery.</li>
+                                        <li>Delivery insurance inclusive.</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!--EXPRESS Delivery-->
+                        <div class="DeliveryOptionsContainers">
+                            <input type="radio" name="DeliveryOptionCheck" id="ID_ExpressDelivery"
+                                value="Express Delivery">
+                            <label for="ID_ExpressDelivery"><span>Express Delivery (R 8 500)</span>
+                                <div class="DeliveryDescription">
+                                    <ul>
+                                        <br>
+                                        <li>About two to three working days, you can expect delivery within a week.</li>
+                                        <li> Get a direct line of contact for updates/enquiries on your delivery.</li>
+                                        <li>Delivery insurance inclusive.</li>
+                                    </ul>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <!--STANDARD Delivery-->
+                        <div class="DeliveryOptionsContainers">
+                            <input type="radio" name="DeliveryOptionCheck" id="ID_StandardDelivery"
+                                value="Standard Delivery">
+                            <label for="ID_StandardDelivery"><span>Standard Delivery (R 5 500)</span>
+                                <div class="DeliveryDescription">
+                                    <ul>
+                                        <br>
+                                        <li>About four to six working days, you can expect delivery within 11 Days.
+                                        </li>
+                                        <li> Get a direct line of contact for updates/enquiries on your delivery.</li>
+                                        <li>Delivery insurance inclusive.</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!--This 2nd Divider Div provides visual aid to the opening and closing of the delivery/collection option-->
+                <div id="ID_LowerDividerDiv"> </div>
+
+
+                <br>
+                <form id="ID_PurchaserDetailsForm">
+                    <div id="ID_PurchaserDetailsDiv">
+                        <h5>Your personal details</h5>
+                        <div class="row ">
+
+                            <!--Left column-->
+                            <div class="col-sm LeftColumn">
+                                <input type="text" id="ID_PurchaserName" placeholder="Fullname" maxlength="50" required>
+                                <br>
+                                <input type="tel" id="ID_PurchaserPhone" placeholder="Phone number(s)" maxlength="50"
+                                    required><br>
+                                <input type="email" id="ID_PurchaserEmail" placeholder="Email address" maxlength="50"
+                                    required><br>
+                                <input type="text" id="ID_PurchaserAddress"
+                                    placeholder="Address (delivery/Correspondence)" maxlength="50" required><br>
+                            </div>
+
+                            <!--Right column-->
+                            <div class="col-md RightColumn">
+                                <textarea id="ID_PurchaserNotes" placeholder="Any extra information to be noted"
+                                    maxlength="500" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <br><br>
+                        <button type="submit" class="btn btn-primary Cls_SiteButtonTheme"
+                            id="ID_SubmitDeliveryDetails">Submit my options</button>
+                    </div>
+
+                </form>
+
+                <div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+    <!-- END VEHICLES DETAILS SECTION-->
+    <!-- MAIN PAGE CONTENT END-->
+
+
+
+
+
+    <!--GET IN TOUCH PANEL-->
+    <section id="ID_GetInTouchPanel" class="shadow" hidden>
+        <!--The preveiw part-->
+        <div id="ID_Standby">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <p>Get In Touch</p>
+        </div>
+
+        <!--Display contact details and form in full when user clicks-->
+        <div id="ID_ContactContainer">
+            <div id="ID_OurContactDetails">
+                <h6>GET IN TOUCH: </h6>
+                <p>
+                    <i class="fas fa-phone-alt"></i> <span id="ID_OurTel" title="Click to call us now">(+27) 011 001 001
+                    </span><br>
+                    <i class="fas fa-envelope"></i> <span id="ID_OurEmail"
+                        title="Click to email us now">sales@merc-shop.co.za</span> <br>
+                    <i class="fas fa-map-marker-alt"></i> <span id="ID_OurAddress">2 Merc Dr, Parkmore, JHB</span> <br>
+                </p>
+            </div>
+
+            <!--Display contact details and form in full when user clicks-->
+            <form id="ID_YourContactDetails">
+                <h6>Or Let us call you back</h6>
+                <input type="text" id="GetInTouchName" placeholder="Fullname" maxlength="50" required><br>
+                <input type="tel" id="GetInTouchPhone" placeholder="Phone number" maxlength="50" required><br>
+                <input type="email" id="GetInTouchEmail" placeholder="Email" maxlength="50" required><br>
+                <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">Submit</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger" id="ID_GetInTouchCloseBtn">Close</button>
+            </form>
+        </div>
+    </section>
+    <!--GET IN TOUCH PANEL END-->
+
+
+    <footer>
+        <br>
+        <button id="ID_BackToTop" class="btn btn-outline-warning"><i class="fas fa-chevron-up"></i> Back to top
+        </button>
+        <br><br>
+        <p><small>
+                &copy; The Merc-shop, Johannesburg, South Africa. All Rights Reserved. <br>
+                Tel: (+27) 011 000 0000 | Email: info@themercshop.co.za | Social Media: @TheMerc-Shop <br>
+                <a href="mailto:bothwell.hyp@gmail.com">Created by Bothwell Dzawoma</a> <br>
+                Level 1 Capstone Project: Last updated 09 Sep 2021. <br>
+                <a href="credits.html" target="_blank">Credits to content used in this project</a>
+            </small>
+        </p>
+    </footer>
+
+
+    <!--JS local-->
+    <script src="js/NavHeroFooterScript.js"></script>
+    <script src="js/MainCartScript.js"></script>
+    <script src="js/ShippingScript.js"></script>
+    <script src="js/GetInTouchScript.js"></script>
+
+</body>
+
+</html>

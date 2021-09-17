@@ -1,0 +1,299 @@
+/*---------------------------------INTERNATIONAL TEAM-------------------------------------*/
+
+/*container for textblock, image and caption*/
+#ID_IntlTeam {
+    background-color: teal;
+    min-height: 60vh;
+    background-clip: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    border: 1px solid teal;
+}
+
+
+/*Fit the image in container*/
+#ID_IntlTeam img {
+    object-fit: scale-down;
+    width: 100%;
+}
+
+/*Zoom image on hover to view it better*/
+#ID_IntlTeam img:hover {
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+/*place the text block/caption*/
+#ID_IntlTeam p {
+    background-color: teal;
+    padding: 40px 15px;
+    color: white;
+    width: 100%;
+}
+
+
+/*-----------------------------------------------JOHANESSBURG TEAM----------------------------------------------------*/
+
+
+/*spacing of the container for ID_Team Text And Joburg Team*/
+#ID_TeamTextAndJoburgTeam {
+    margin: 100px 0;
+}
+
+/*Customise the team text side*/
+#ID_TeamTextSide {
+    background-color: teal;
+    color: rgb(219, 219, 219);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    text-align: justify;
+
+}
+
+
+
+/*read more button*/
+#ID_MoreButton {
+    padding-top: 2px 0 2px 0;
+    border-radius: 0;
+}
+
+/*Customise the team text side*/
+#ID_GetInTouchText, #ID_TeamText{
+    display: block;
+    /*by default it's inline, so the boarder below gets applied per each line*/
+    border: 1px solid rgb(192, 191, 191);
+    padding: 10px;
+    line-height: 2rem;
+}
+
+/*Customise inline link to catalogue*/
+#ID_GetInTouchText a {
+    text-decoration: none;
+    color: white;
+    /*
+    border:1px solid white; 
+    padding: 5px 8px;
+    background-color: rgb(2, 90, 90);
+    transition: border-radius .5s;
+    border-radius: 5px;
+    */
+}
+
+/*CCustomise inline link to catalogue on hover*/
+#ID_GetInTouchText a:hover {
+    border-radius: 15px;
+    transition: .5s;
+}
+
+
+/*Initialise the More text/button,to hide the more text until button clicked and toggles the value/state*/
+#ID_MoreToBeDisplayed {
+    display: none;
+    /*The JS script will later come read here and toggle the display options/state*/
+}
+
+/*Style for text Joburg Team  text block container*/
+#ID_TeamImageContainer {
+    position: relative;
+    border: 1px solid teal;
+    padding: 5px;
+    object-fit: scale-down;
+    border-radius: 5px;
+    min-width: 350px;
+    margin: 10px;
+}
+
+/*Fit the joburg team image in container*/
+#ID_JoburgTeamImage {
+    object-fit: scale-down;
+    width: 100%;
+}
+
+
+
+
+/*Style for text Joburg Team text block*/
+#ID_JHBTeamTextBlock {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(17, 17, 17, 0.7);
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+
+
+/*-----------------------------------------------LOWER SECTION----------------------------------------------------*/
+
+
+/*Styling for Tina Showcase Block Text*/
+.Cls_TextBlock {
+    position: absolute;
+    bottom: 25%;
+    right: 10px;
+    background-color: rgba(17, 17, 17, 0.7);
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+/*Styling for bottom 2 images*/
+#ID_TeamMemberImage1, #ID_TeamMemberImage2 {
+    width: 48%;
+    display: block;
+    padding: 10px;
+    border: 1px solid teal;
+    margin-right: 10px;
+    color: rgb(235, 232, 232);
+    position: relative;
+    min-width: 300px;
+}
+
+
+/*Float team image to the left*/
+#ID_TeamMemberImage1 {
+    float: left;
+}
+
+
+/*Float team image to the right*/
+#ID_TeamMemberImage2 {
+    float: right;
+}
+
+
+/*Applying greyscale color filter on image*/
+#ID_TeamMemberImage1 img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/*Applying greyscale color filter on image*/
+#ID_TeamMemberImage2 img {
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
+}
+
+
+
+/*-----------------------------------------------THE SIDE BAR----------------------------------------------------*/
+
+
+
+/*Style the side bar*/
+#ID_SideBar {
+    background-color: black;
+    border: 4px solid teal;
+    border-top: 20px solid teal;
+    border-bottom: 20px solid teal;
+    background-image: url("../images/sidebar-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 50px;
+    min-height: 100vh;
+    min-width: 250px;
+}
+
+/*position the testimonial on the side bar*/
+#ID_Testimonial {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0;
+    color: rgb(196, 196, 196);
+    text-align: center;
+    padding: 5%;
+    background-color: teal;
+}
+
+/*resize and style the testimonial image/logo */
+#ID_Testimonial img {
+    border-radius: 50%;
+    width: 40%;
+}
+
+/*Style the test in the testimonial*/
+#ID_Testimonial p {
+    text-align: justify;
+}
+
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+    color: lightslategray;
+}
+
+
+
+/*--------------------------------------SMALLER/MOBULE SREANS----------------------------------------------------*/
+
+
+/*Catering for Mobile and tablet display*/
+@media (max-width:1000px) {
+
+    #ID_TeamMemberImage2,
+    #ID_TeamMemberImage1 {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+}
+/*Catering for Mobile and tablet display*/
+@media (max-width:900px) {
+
+    #ID_TeamMemberImage2,
+    #ID_TeamMemberImage1 {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /*Allow height to display good portion of the image showing the benz car*/
+    #ID_SideBar {
+        margin-top: 20px;
+        min-height: 240vh;
+    }
+    
+    /*Adjust container for textblock, image and caption*/
+#ID_IntlTeam {
+    background-color: teal;
+    min-height: 20vh;
+}
+
+/*Adjust text size*/
+#ID_IntlTeam p {
+    padding: 10px 15px;
+}
+
+}
+
+/*------------------------------------ SCALE ANIMATION ON IMAGES------------------------------*/
+
+/*Scale animation on select page  images*/
+.ScaleAnim {
+transform: scale(1);
+transition: .5s;
+
+}
+/*Scale animation onselect page  images*/
+.ScaleAnim:hover{
+    transform: scale(1.5);
+    transition: .5s;
+}
+
+.ScaleAnimContainer{
+    overflow: hidden;
+}
+

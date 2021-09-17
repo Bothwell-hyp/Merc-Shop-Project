@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--tried to makte the site's code semantic for Accessibility too -->
+<html lang="eng">
+
+<head>
+    <title> Home</title>
+
+    <meta charset="utf-8">
+    <!--font awesome Icons-->
+    <script src="https://kit.fontawesome.com/b69c959b3b.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome - make it load quicker - Got this from: https://stackoverflow.com/a/35880730/16333159-->
+    <link href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' rel='stylesheet' type='text/css'>
+    <!--Resposive meta, cater for mobile viewports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Link to current bootstrap 4.4.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Stylesheet local-->
+    <link type="text/css" rel="stylesheet" href="css/navStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/heroStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/HomeStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/GetInTouchStyle.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+    <!--
+    1) CREATED PAGE AS ACCORDING TO: https://developer.mozilla.org/en-US/docs/Archive/Meta_docs/Page_types/Landing_page#standard_topic_landing_page
+    -->
+
+    <!---------------------------------------------------------------------------------------------->
+
+    <!--MAIN NAVIGATION MENU START-->
+    <nav>
+        <!--text in span meant for mobile displays, for intuitive navigation-->
+        <label id="ID_Logo" title="Click on logo go to home page">Merc-Shop<span> - Home</span> </label>
+        <ul>
+            <li class="Cls_active"><a href="index.html">Home</a></li>
+            <li><a href="Team.html">Our team</a></li>
+            <li><a href="Catalogue.html"><i class="far fa-check-circle Cls_CatalogueProgressIcon"></i> Catalogue</a>
+            </li>
+            <li><a href="Shipping.html"><i class="far fa-check-circle Cls_ShippingProgressIcon"></i> Shipping</a></li>
+            <!-- Gap between </i> <span> below is intentional, insteaad of using margin in css-->
+            <li id="ID_CartMenu" title="Cart Total: R0.00"><a href="Cart.html"> <i
+                        class="far fa-check-circle Cls_OrderConfirmProgressIcon"></i> <i class="fas fa-shopping-cart"></i>
+                    <span>Cart ..</span></a></li>
+        </ul>
+        <label id="ID_MobileMenu">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <!--MAIN NAVIGATION MENU END-->
+
+
+
+    <!--HERO BANNER SECTION START-->
+    <section id="ID_HeroBanner">
+        <div class="BackgroundDIsplay Active"></div>
+        <div class="BackgroundDIsplay InActive"></div>
+
+        <div id="ID_HeroContent">
+            <div class="row">
+
+                <div class="col-md" id="HeroIntroSideContainer">
+                    <div class="border">
+                        <h1 id="ID_IntroHeading">You Deserve <br>Nothing Less.</h1>
+                        <h4 id="SiteName">The Merc-shop</h4>
+                        <p id="ID_Motto">For the merc treats & delights.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md" id="HeroGetStartedSideContainer">
+                    <div>
+                        <!--the divider image is to maintain margin and height for the keyfob animation-->
+                        <button  id="ID_GetStartedBtn" class="btn btn-primary" title="Order your own merc today."
+                            onclick="location.href='Catalogue.html';">
+                            <img src="images/keyfob.png"><img id="ID_Devider" src="images/devider.png">
+                            <span>Get Started</span></button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--HERO BANNER SECTION END-->
+
+
+
+    <!-- MAIN CONTENT + SIDE BAR ON LAST ROW -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <!-- START MAIN CONTENT SIDE-->
+
+
+                <!-- SUMMARY PART-->
+                <section class="container" id="ID_SummarySection">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><b>Buying A New Car?</b> Driving a top-of-the-game car like Mercedes-Benz is a dream come
+                                true for everyone, and we're here to make that luxurious dream a reality for you. With a
+                                state of the art showroom and a wide range of Mercs available, we have what it takes to
+                                satisfy even your most sophisticated tastes and eye for quality.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TOP, 3 LINKED BOXES-->
+                <section class="container" id="ID_3Boxes">
+                    <div class="row">
+                        <div class="col-sm" id="ID_Box1">
+                            <!-- Box 1, The Team-->
+                            <a href="index.html"> Welcome </a>
+                        </div>
+                        <div class="col-sm" id="ID_Box2">
+                            <!-- Box 2, Catalogue-->
+                            <a href="Catalogue.html"> Our Catalogue </a>
+                        </div>
+                        <div class="col-sm" id="ID_Box3">
+                            <!-- Box 3, Shipping-->
+                            <a href="Shipping.html"> Shipping </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- CONCEPTS & WHATS HOT (CATALOGUE PREVIEW)-->
+                <div class="container" id="ID_ConceptAndCatalogue">
+                    <div class="row">
+                        <!--Left Side with text-->
+                        <div class="col-md-4" id="ID_ConceptSide">
+                            <h3> Epitomising The Art Of Luxury Driving.</h3>
+                            <!--the text below is not mine: https://www.connollys.ie/news/five-reasons-to-buy-a-mercedes-benz/-->
+                            <p style="text-align: justify;">Mercedes-Benz is the mirror reflection and an undeniable
+                                embodiment of luxury and finesse.
+                                Its elegance commands a royal-like authority on the tarmac, and has a long trusted
+                                reputation among business executives,
+                                statesmen & women, the well to do and famous, and all of us who give the brand its
+                                truest definition of magnificence.
+                                <br> <br> <i style="color: rgb(247, 200, 113);"> Click on these next images to view our
+                                    catalogue </i>
+                            </p>
+                        </div>
+                        <div class="col-md">
+                            <!--Right Side with catalogue preview-->
+                            <!--split into half-->
+                            <!-- Nest a bootstrap grid, 3rows x 4collums, for catalogue preview-->
+                            <div class="container" id="ID_CatalogueContainer">
+                                <a href="Catalogue.html">
+                                    <!-- 1st row-->
+                                    <div class="row">
+                                        <!--1st Col-->
+                                        <div class="col-md shadow p-2 CarBox">
+                                            <!-- The two classes below, i noticed the order is also important,
+                                                 the subsequent one has dominance  (cascadence) as do the head's ordering-->
+                                            <img src="images/home1.jpg" class="img-thumbnail img-fluid"
+                                                alt="2021 Mercedes-Benz G400 D">
+                                        </div>
+                                        <!--2nd Col-->
+                                        <div class="col-md shadow p-2 CarBox">
+                                            <img src="images/home2.jpg" class="img-thumbnail img-fluid"
+                                                alt="2021 Mercedes-Benz GLC63S">
+                                        </div>
+                                    </div>
+
+                                    <!-- 2nd row-->
+                                    <div class="row" id="ID_Row2">
+                                        <!--1st Col-->
+                                        <div class="col-md shadow p-2 CarBox">
+                                            <img src="images/home4.jpg" class="img-thumbnail img-fluid"
+                                                alt="2021 Mercedes-benz GLS 63">
+                                        </div>
+                                        <!--2nd Col-->
+                                        <div class="col-md shadow p-2 CarBox">
+                                            <img src="images/home3.jpg" class="img-thumbnail img-fluid"
+                                                alt="2021 Mercedes-benz C300">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> <!-- Closing tag of catalogue preview-->
+                        </div> <!-- closing tag for half of Right Side preview-->
+                    </div>
+                </div>
+
+                <!-- LAST 2 BOTTOM 2 Boxes-->
+                <section class="container" id="LowerSection">
+                    <div class="row ">
+                        <div class="col" id="ID_OfflinksBox">
+                            <!-- OffSite Referrences-->
+                            <h4>The World Of Merc</h4>
+                            <br>
+                            <ul id="ID_OffSiteLinksList">
+                                <li>Check out Mercedes-Benz reviews on one of South Africa's trusted and leading top car
+                                    magazine <a href="https://www.topcar.co.za/"> www.TopCar.co.za </a></li>
+                                <li>Browse and see some of the recently tested Mercs and compare to other cars, you'll
+                                    appreciate our brand more <a href="https://www.topcar.co.za/road-tests">
+                                        www.TopCar.co.za </a></li>
+                                <li> Or why not head over to the official mercedes-benz's online magazine today and
+                                    subscribe
+                                    to get in the loop <a href="https://www.mercedes-benz.co.za">
+                                        www.mercedes-benz.co.za
+                                    </a> </li>
+                            </ul>
+                        </div>
+
+                        <div class="col" id="ID_ComunityBox" onsubmit="Fcn_Subscribe()">
+                            <!-- Community Box-->
+                            <form id="ID_FormSubscribe">
+
+                                <h4> Subscribe & Join our community </h4>
+                                <div class="Cls_RemackContainer">
+                                    <div class="Clc_ClosingRemark">
+                                        <p>Thank you and welcome! <br>
+                                            <small></small> </p>
+                                    </div>
+                                </div>
+                                <div class="Cls_FormContents">
+                                    <br>
+                                    <input type="text" class="form-control" id="SubscribeName" placeholder="Your name"
+                                    maxlength="50" required>
+                                    <input type="tel" class="form-control" id="SubscribePhone" placeholder="Phone" maxlength="50">
+                                    <input type="email" class="form-control" id="SubscribeEmail" placeholder="Email"
+                                    maxlength="50" required>
+                                    <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">
+                                        Subscribe</button>
+                                </div>
+
+                                <br>
+                            </form>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div> <!-- CLOSE MAIN CONTENT (LEFT SIDE)-->
+
+
+
+            <!-- START SIDE BAR-->
+            <div class="col-md-3" id="ID_SideBar">
+                <!-- Add a single testimonial in side bar-->
+                <div id="ID_Testimonial">
+                    <img src="images/Testimonial-logo.jpg" class="img-fluid" alt="Testimonial logo">
+                    <h5>MANNINGS INTERNATIONAL</h5>
+                    <p>"Our firm's top executive trusts and continues to shop top-of-the-game luxury vehicles from
+                        Merc-shop, their attention to total perfection and satisfaction is unmatched."
+                    </p>
+                </div>
+            </div>
+        </div><!-- CLOSE MAIN ROW-->
+    </section> <!-- CLOSE MAIN CONTENT & SIDEBAR CONTAINER, M-->
+
+
+
+
+    <!--GET IN TOUCH PANEL-->
+    <section id="ID_GetInTouchPanel" class="shadow" hidden>
+        <!--The preveiw part-->
+        <div id="ID_Standby">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <p>Get In Touch</p>
+        </div>
+
+        <!--Display contact details and form in full when user clicks-->
+        <div id="ID_ContactContainer">
+            <div id="ID_OurContactDetails">
+                <h6>GET IN TOUCH: </h6>
+                <p>
+                    <i class="fas fa-phone-alt"></i> <span id="ID_OurTel" title="Click to call us now">(+27) 011 001 001
+                    </span><br>
+                    <i class="fas fa-envelope"></i> <span id="ID_OurEmail"
+                        title="Click to email us now">sales@merc-shop.co.za</span> <br>
+                    <i class="fas fa-map-marker-alt"></i> <span id="ID_OurAddress">2 Merc Dr, Parkmore, JHB</span> <br>
+                </p>
+            </div>
+
+            <!--Display contact details and form in full when user clicks-->
+            <form id="ID_YourContactDetails">
+                <h6>Or Let us call you back</h6>
+                <input type="text" id="GetInTouchName" placeholder="Fullname" maxlength="50" required><br>
+                <input type="tel" id="GetInTouchPhone" placeholder="Phone number" maxlength="50" required><br>
+                <input type="email" id="GetInTouchEmail" placeholder="Email" maxlength="50" required><br>
+                <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">Submit</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger" id="ID_GetInTouchCloseBtn">Close</button>
+            </form>
+        </div>
+    </section>
+    <!--GET IN TOUCH PANEL END-->
+
+
+
+
+    <footer>
+        <br>
+        <button id="ID_BackToTop" class="btn btn-outline-warning"><i class="fas fa-chevron-up"></i> Back to top
+        </button>
+        <br><br>
+        <p><small>
+                &copy; The Merc-shop, Johannesburg, South Africa. All Rights Reserved. <br>
+                Tel: (+27) 011 000 0000 | Email: info@themercshop.co.za | Social Media: @TheMerc-Shop <br>
+                <a href="mailto:bothwell.hyp@gmail.com">Created by Bothwell Dzawoma</a> <br>
+                Level 1 Capstone Project: Last updated 09 Sep 2021. <br>
+                <a href="credits.html" target="_blank">Credits to content used in this project</a>
+            </small>
+        </p>
+    </footer>
+
+
+    <!--JS local-->
+    <script src="js/NavHeroFooterScript.js"></script>
+    <script src="js/MainCartScript.js"></script>
+    <script src="js/homeScript.js"></script>
+    <script src="js/GetInTouchScript.js"></script>
+</body>
+
+</html>

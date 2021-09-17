@@ -1,0 +1,227 @@
+/*------------------------------------------------ PREPARE BODY --------------------------------------------------*/
+
+/*Get rid of all text decoration in general*/
+html {
+    text-decoration: none;
+}
+
+/*interestingly the body has some padding and margin*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*------------------------------------------------ NAV STYLING --------------------------------------------------*/
+
+
+nav * {
+    padding: 0;
+    margin: 0;
+    /*had to use !important to overide Bootstrap's*/
+    text-decoration: none !important;
+    list-style-type: none;
+}
+
+/*Hide mobile menu icon at in desktop view*/
+#ID_MobileMenu {
+    display: none;
+}
+
+/*container appearance and positioning*/
+nav {
+    background-color: teal;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    /*0 is default too*/
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+        /*can put comma and add another multiple shaddows*/
+
+}
+
+/*Logo text*/
+nav #ID_Logo {
+    display: inline-block;
+    margin: 20px 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/*For mobile menu's navigation convenience*/
+nav #ID_Logo span {
+    display: none;
+    margin: 20px 10px;
+    font-size: 1rem;
+    color: rgb(136, 208, 211);
+    font-weight: 200;
+    cursor: default;
+}
+
+
+/*positioning of links*/
+nav ul {
+    z-index: 100;
+    float: right;
+}
+
+/*menu items styling*/
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+/*Actual links, the appearance*/
+nav a {
+    border: 2px solid transparent;
+    padding: 0px 8px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*Hover effect and active menu/location*/
+nav .Cls_active,
+nav li:hover {
+    background-color: rgb(2, 95, 95);
+    border-bottom: 4px solid rgb(189, 189, 190);
+    border-bottom-right-radius: 15px;
+    transition: .5s;
+}
+
+/*keep the links colour white*/
+nav a:hover {
+    color: white;
+}
+
+/*--------------------------------------------------- PROGRESS TICK ICONS ---------------------------------*/
+
+/*Before user starts Progress*/
+.Cls_CatalogueProgressIcon,
+.Cls_ShippingProgressIcon,
+.Cls_OrderConfirmProgressIcon {
+    opacity: 0.2;
+}
+
+/*When user succeeds the Progress*/
+.ProgressDone {
+    opacity: 0.8;
+}
+
+/*--------------------------------------------------- SMALLER/MOBILE MENUS ---------------------------------*/
+
+/*tablet menu, reduce fonts size*/
+@media (max-width:850px) {
+    nav a {
+        /*smaller display reduce size, everything remains the same as up there*/
+        font-size: 14px;
+    }
+
+    /*smaller display reduce size, everything remains unchanged*/
+    #ID_Logo {
+        font-size: 30px;
+    }
+}
+
+
+
+
+/*------------------------------------------------ NAV REDESIGN FOR MOBILE --------------------------------------------------*/
+
+/*mobile menu, change appearance to mobile*/
+
+@media (max-width:795px) {
+
+    /*Only show here in mobile menu*/
+nav #ID_Logo span {
+    display: inline-block;
+}
+
+    /*mobile menu icon*/
+    nav #ID_MobileMenu {
+        display: block;
+        float: right;
+        color: white;
+        cursor: pointer;
+        line-height: 80px;
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+    /*menu container styling*/
+    nav ul {
+        position: fixed;
+        top: 80px;
+        background-color: rgb(3, 121, 121);
+        height: 100vh;
+        width: 100%;
+        left: -100vw;
+
+        /*Is now handled in JS with 
+        Cls_SmoothSlideBack below to 
+        prevent erratic showing when 
+        resizing windows */
+        /*transition: left .5s;*/
+
+    }
+
+    /*Class used in the JS to prevent 
+    erratic showing when resizing windows*/
+    .Cls_SmoothSlideBack {
+        transition: left .5s
+    }
+
+
+
+
+    /*in mobile menu, display the menu items one above the other*/
+    nav li {
+        display: block;
+        margin: 2px 2px;
+    }
+
+    /*links styling for mobile*/
+    nav a {
+        margin-left: 5%;
+        padding: 10px 8px;
+        font-size: 14px;
+        border: 2px solid transparent;
+        font-size: 1rem;
+    }
+
+    /*menu hover and active style*/
+    nav .Cls_active,
+    nav li:hover {
+        background-color: rgb(2, 95, 95);
+        transition: all .5s;
+        border: none;
+        border-radius: 0;
+    }
+
+    /*keep the links colour white*/
+    nav a:hover {
+        color: white;
+    }
+
+    /*class to show and unhide mobile menu container*/
+    nav ul.Cls_show {
+
+        left: 0vw;
+        transition: left .6s;
+    }
+
+}

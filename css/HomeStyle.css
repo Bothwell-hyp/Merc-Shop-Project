@@ -1,0 +1,319 @@
+/*HERO SECTION HAS A SEPERATE FILE, 
+FOR EASY CODE REUSABILITY AND MAINTENANCE ACROSS ALL PAGES
+*/
+
+/*--------------------------------SUMMARY SECTION------------------------------------*/
+
+/*Summary part*/
+#ID_SummarySection {
+    background-color: teal;
+    color: rgb(219, 219, 219);
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+/*--------------------------------3 BOXES (LINK BUTTONS)------------------------------------*/
+
+/*customize the style of the boxes/buttons*/
+#ID_Box1,
+#ID_Box2,
+#ID_Box3 {
+    background-color: orange;
+    /*rgba(107, 91, 20, 0.4)*/
+    color: rgb(83, 83, 83);
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+
+}
+
+/*Box 1 is the same home page's link, hence background is teal*/
+#ID_Box1 {
+    background-color: teal;
+}
+
+/*format the links of the 3 boxes/buttons*/
+#ID_3Boxes a {
+    text-decoration: none;
+    color: black;
+}
+
+/*hover on the 3 buttons/boxes */
+#ID_Box1:hover,
+#ID_Box2:hover,
+#ID_Box3:hover {
+    border: white;
+    background-color: teal;
+}
+
+
+/*---------------------------MIDSECTION OUR CONCEPT AND CATALOGUE HIGHLIGHT----------------------------------*/
+
+/*customize the container for Concept & Catalogue*/
+#ID_ConceptAndCatalogue {
+    background-color: teal;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: 10px solid teal;
+    margin-top: 80px;
+    color: orange;
+}
+
+/*Customize the background for cars thumbnails*/
+.CarBox {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+
+}
+
+/*Hover animation of cars*/
+.CarBox img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+/*Customise the concept side*/
+#ID_ConceptSide {
+    border-right: 1px solid rgb(255, 255, 255);
+    min-width: 245px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/*Heading colour*/
+#ID_ConceptSide h3 {
+    color: rgb(198, 213, 228);
+
+}
+
+
+/*customize the container for catalogue priview.*/
+#ID_CatalogueContainer {
+    width: 100%;
+
+}
+
+/*Customise multiple image/thumbnail shapes*/
+/*Set thumbnails width*/
+.img-thumbnail {
+    transform: scale();
+    transition: transform .5s;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*--------------------------------LOWER SECTION: WORLD OF MERC & SUBSCRIBE------------------------------------*/
+
+
+/* Off-site links and Community boxes*/
+#LowerSection {
+    margin-top: 30px;
+}
+
+/*Links that go outside our website, and the box for subscribe into our community*/
+#ID_OfflinksBox,
+#ID_ComunityBox {
+    /*padding: 15px;*/
+    color: rgb(235, 232, 232);
+    background-color: rgb(89, 99, 99);
+    min-width: 250px;
+    margin-bottom: 40px;
+    padding: 0;
+
+    border-bottom: 0px solid rgb(17, 17, 17);
+    border-radius: 10px;
+}
+
+/*Links that go outside our website, headings styling*/
+#ID_OfflinksBox h4,
+#ID_ComunityBox h4 {
+    font-weight: 100;
+    font-size: 18px;
+    background-color: rgb(17, 17, 17);
+    padding: 20px 10px;
+    width: 100%;
+    border-bottom: 0px solid rgb(197, 197, 197);
+    border-radius: 10px 10px 0 0;
+}
+
+/*horizontal Spacing from the other */
+#ID_ComunityBox {
+    margin-left: 5px;
+}
+
+
+
+/* Customise style for offsite links*/
+#ID_OffSiteLinksList {
+    list-style-type: square;
+}
+
+
+
+/*redability colour contrast of links*/
+#ID_OfflinksBox a {
+    color: rgb(250, 187, 69);
+}
+
+/*Adjust space inside the container while allowing heading h4 label to fill its space*/
+#ID_FormSubscribe .Cls_FormContents * {
+    margin: 8px 20px;
+    max-width: 300px;
+}
+
+/*input text fields dimentions*/
+.form-control{
+width:80%;
+}
+
+.Cls_RemackContainer{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+
+/*Remark to display after user subscription*/
+.Clc_ClosingRemark {
+    /*Overwrite bootstrap*/
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px solid rgb(17, 17, 17);
+    border-bottom: 1px dotted wheat;
+    background-color: inherit;
+    
+}
+
+/*The remark text*/
+.Clc_ClosingRemark p {
+     text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.Clc_ClosingRemark p small {
+   font-size: 1rem;
+}
+
+.HideContents{
+    opacity: 0;
+    transition: .5s;
+}
+
+
+/*Customize bootstrap styling for the car item box*/
+.border {
+    border-radius: 5px;
+    padding: 4px;
+    margin: 4px;
+    padding-bottom: 10px;
+}
+
+
+/*-----------------------------------------------THE SIDE BAR----------------------------------------------------*/
+
+
+/*Style the side bar*/
+#ID_SideBar {
+    background-color: black;
+    border: 4px solid teal;
+    border-top: 20px solid teal;
+    border-bottom: 20px solid teal;
+    background-image: url("../images/sidebar-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 50px;
+    min-height: 100vh;
+    min-width: 150px;
+    margin-bottom: 40px;
+}
+
+/*position the testimonial on the side bar*/
+#ID_Testimonial {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0;
+    color: rgb(196, 196, 196);
+    text-align: center;
+    padding: 5%;
+    background-color: teal;
+}
+
+/*resize and style the testimonial image/logo */
+#ID_Testimonial img {
+    border-radius: 50%;
+    width: 40%;
+}
+
+/*Style the test in the testimonial*/
+#ID_Testimonial p {
+    text-align: justify;
+}
+
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+    color: lightslategray;
+}
+
+
+/*--------------------------------------------MOBILE?SMALLER DISPLAYS-----------------------------*/
+
+/*Catering for Mobile and tablet display*/
+@media (max-width:750px) {
+
+    /*change border to bottom*/
+    #ID_ConceptSide {
+        border-right: initial;
+        border-bottom: 1px solid rgb(255, 255, 255);
+
+    }
+}
+
+
+/*Catering for Mobile and tablet display*/
+@media (max-width:550px) {
+
+    /*change border to bottom*/
+    #ID_OfflinksBox,
+    #ID_ComunityBox {
+        margin: 5px 0;
+        margin-bottom: 40px;
+
+    }
+
+    /*Allow height to display good portion of the image showing the benz car*/
+    #ID_SideBar {
+        min-height: 200vh;
+    }
+}
+
+/*Catering for Mobile and tablet display*/
+@media (max-width:850px) {
+
+    /*Allow height to display good portion of the image showing the benz car*/
+    #ID_SideBar {
+        min-height: 200vh;
+    }
+}
+
+
+/*NB: 
+Button's teal theme style is in NavHeroFooterStyle.css 
+placed there for code reuse and since it's called/used
+in  all documents.
+*/

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Catalogue</title>
+
+    <meta charset="utf-8">
+    <!--font awesome Icons-->
+    <script src="https://kit.fontawesome.com/b69c959b3b.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome - make it load quicker - Got this from: https://stackoverflow.com/a/35880730/16333159-->
+    <link href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' rel='stylesheet' type='text/css'>
+    <!--Resposive meta, cater for mobile viewports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Link to bootstrap 4.5.2-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+    <!--Stylesheet local-->
+    <!--Stylesheet local-->
+    <link type="text/css" rel="stylesheet" href="css/navStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/heroStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/CatalogueStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/GetInTouchStyle.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+
+    <!--MAIN NAVIGATION MENU START-->
+    <nav>
+        <!--text in span meant for mobile displays, for intuitive navigation-->
+        <label id="ID_Logo" title="Click on logo go to home page">Merc-Shop<span> - Catalogue</span> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Team.html">Our team</a></li>
+            <li class="Cls_active"><a href="Catalogue.html"><i
+                        class="far fa-check-circle Cls_CatalogueProgressIcon"></i> Catalogue</a></li>
+            <li><a href="Shipping.html"><i class="far fa-check-circle Cls_ShippingProgressIcon"></i> Shipping</a></li>
+            <!-- Gap between </i> <span> below is intentional, insteaad of using margin in css-->
+            <li id="ID_CartMenu" title="Cart Total: R0.00"><a href="Cart.html"> <i
+                        class="far fa-check-circle Cls_OrderConfirmProgressIcon"></i> <i
+                        class="fas fa-shopping-cart"></i>
+                    <span>Cart ..</span></a></li>
+        </ul>
+        <label id="ID_MobileMenu">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <!--MAIN NAVIGATION MENU END-->
+
+
+
+    <!--HERO BANNER SECTION START-->
+    <section id="ID_HeroBanner">
+        <div class="BackgroundDIsplay Active"></div>
+        <div class="BackgroundDIsplay InActive"></div>
+
+        <div id="ID_HeroContent">
+            <div class="row">
+
+                <div class="col-md" id="HeroIntroSideContainer">
+                    <div class="border">
+                        <h1 id="ID_IntroHeading">You Deserve <br>Nothing Less.</h1>
+                        <h4 id="SiteName">The Merc-shop</h4>
+                        <p id="ID_Motto">For the merc treats & delights.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md" id="HeroGetStartedSideContainer">
+                    <div>
+                        <!--the divider image is to maintain margin and height for the keyfob animation-->
+                        <button id="ID_GetStartedBtn" class="btn btn-primary"
+                            title="Welcome. Scroll below and start adding to your Cart.">
+                            <img src="images/keyfob.png"><img id="ID_Devider" src="images/devider.png">
+                            <span>Hi, Welcome.</span></button>
+                        <!--We're now on getting started-->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- END OF HERO BANNER SECTION-->
+
+
+
+
+    <!--MAIN PAGE CONTENT-->
+    <!-- VEHICLES CATALOGUE SECTION, bootstrap grid, 3rows x 4collums-->
+    <section class="" id="ID_CatalogueContainer">
+
+        <h3 id="ID_PageHeading">Our Deluxe Catalogue</h3>
+        <hr style="background-color:grey">
+
+        <!--DROPDOWN MENU FOR DISPLAY OPTIONS-->
+        <section id="ID_DropDownMenu_Container">
+            <label id="ID_DropDownLabel"> <i class="fas fa-caret-down"></i> <i class="fas fa-list"></i> <span>Category: Year 2021</span></label>
+            <ul>
+                <li class="Cls_ShowAllMercs"><i class="fa fa-th" aria-hidden="true"></i>All Mercs</li>
+                <li class="Cls_ShowYear2021"><i class="fa fa-th" aria-hidden="true"></i>Year 2021</li>
+                <li class="Cls_ShowYear2020"><i class="fa fa-th" aria-hidden="true"></i>Year 2020</li>
+                <li class="Cls_ShowYear2019"><i class="fa fa-th" aria-hidden="true"></i>Year 2019</li>
+                <li class="Cls_ShowAllCarsList"><i class="fa fa-list-alt" aria-hidden="true"></i>List all cars</li>
+            </ul>
+        </section>
+
+
+        <!-- 1st row-->
+        <!--Cls_ShowYear2021 Cls_ShowAllMercs, these 2 clases are for dertemining display categories-->
+        <section class="row justify-content-center Cls_ShowYear2021 Cls_ShowAllMercs">
+            <h4 class="Cls_YearHeading">~ 2021 ~</h4>
+
+            <!--1st Col-->
+            <div class="col-sm   Cls_Vehicles" id="Car1"> </div>
+
+            <!--2nd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car2"> </div>
+
+            <!--3rd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car3"> </div>
+
+            <!--4th Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car4"> </div>
+        </section>
+
+
+
+        <!-- 2nd row-->
+        <!--Cls_ShowYear2020 Cls_ShowAllMercs, these 2 clases are for dertemining display categories-->
+        <section class="row mb-5 justify-content-center Cls_ShowYear2020 Cls_ShowAllMercs">
+            <h4 class="Cls_YearHeading">~ 2020 ~</h4>
+
+            <!--1st Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car5"> </div>
+
+            <!--2nd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car6"> </div>
+
+            <!--3rd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car7"> </div>
+
+            <!--4th Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car8"> </div>
+        </section>
+
+
+
+        <!-- 3rd row-->
+        <!--Cls_ShowYear2019 Cls_ShowAllMercs, these 2 clases are for dertemining display categories-->
+        <section class="row justify-content-center mb-5 Cls_ShowYear2019 Cls_ShowAllMercs">
+            <h4 class="Cls_YearHeading">~ 2019 ~</h4>
+
+            <!--1st Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car9"> </div>
+
+            <!--2nd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car10"> </div>
+
+            <!--3rd Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car11"> </div>
+
+            <!--4th Col-->
+            <div class="col-sm  Cls_Vehicles" id="Car12"> </div>
+            <br>
+
+
+        </section>
+
+
+        <!-- 4th row-->
+        <!--Cls_ShowAllCarsList, is the dertemining clas to display this category-->
+        <section class="row justify-content-center mb-5 Cls_ShowAllCarsList">
+            <h4 class="Cls_YearHeading">~ List Of All Available Cars ~</h4>
+
+            <div class="col mb-2" id="ID_TableContainer">
+
+                <!--hover table also showing tabular list of the vehicles in our catalogue.-->
+                <section id="ID_HoverTableSection">
+                    <h4> <i class="fa fa-list-alt" aria-hidden="true"></i> Vehicles available in this catalogue
+                    </h4>
+
+                    <div class="Cls_TableListContainer">
+                        <table id="ID_AllCarsTable">
+                            <tr>
+                                <!-- Table header-->
+                                <th> Year</th>
+                                <th> Model</th>
+                                <th> Colour</th>
+                                <th> Price</th>
+                                <th hidden> CarID</th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <!-- END HOVER TABLE-->
+            </div>
+        </section>
+
+
+    </section>
+    <!-- END VEHICLES CATALOGUE SECTION-->
+    <!-- MAIN PAGE CONTENT END-->
+
+
+
+
+    <!--USER'S CONVENIENCE: NEXT AND BACK NAVIGATION-->
+    <div id="ID_PrevNextContainer">
+        <label id="ID_PrevCategory"><span class="Cls_CaptionPrev">Year 2021</span><i
+                class="fas fa-arrow-circle-left"></i> </label> &nbsp;
+        <label id="ID_NextCategory"><i class="fas fa-arrow-circle-right"></i> <span class="Cls_CaptionNext">Year
+                2019</span></label>
+    </div>
+
+
+
+
+    <!--GET IN TOUCH PANEL-->
+    <section id="ID_GetInTouchPanel" class="shadow" hidden>
+        <!--The preveiw part-->
+        <div id="ID_Standby">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <p>Get In Touch</p>
+        </div>
+
+        <!--Display contact details and form in full when user clicks-->
+        <div id="ID_ContactContainer">
+            <div id="ID_OurContactDetails">
+                <h6>GET IN TOUCH: </h6>
+                <p>
+                    <i class="fas fa-phone-alt"></i> <span id="ID_OurTel" title="Click to call us now">(+27) 011 001 001
+                    </span><br>
+                    <i class="fas fa-envelope"></i> <span id="ID_OurEmail"
+                        title="Click to email us now">sales@merc-shop.co.za</span> <br>
+                    <i class="fas fa-map-marker-alt"></i> <span id="ID_OurAddress">2 Merc Dr, Parkmore, JHB</span> <br>
+                </p>
+            </div>
+
+            <!--Display contact details and form in full when user clicks-->
+            <form id="ID_YourContactDetails">
+                <h6>Or Let us call you back</h6>
+                <input type="text" id="GetInTouchName" placeholder="Fullname" maxlength="50" required><br>
+                <input type="tel" id="GetInTouchPhone" placeholder="Phone number" maxlength="50" required><br>
+                <input type="email" id="GetInTouchEmail" placeholder="Email" maxlength="50" required><br>
+                <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">Submit</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger" id="ID_GetInTouchCloseBtn">Close</button>
+            </form>
+        </div>
+    </section>
+    <!--GET IN TOUCH PANEL END-->
+
+
+    <footer>
+        <br>
+        <button id="ID_BackToTop" class="btn btn-outline-warning"><i class="fas fa-chevron-up"></i> Back to top
+        </button>
+        <br><br>
+        <p><small>
+                &copy; The Merc-shop, Johannesburg, South Africa. All Rights Reserved. <br>
+                Tel: (+27) 011 000 0000 | Email: info@themercshop.co.za | Social Media: @TheMerc-Shop <br>
+                <a href="mailto:bothwell.hyp@gmail.com">Created by Bothwell Dzawoma</a> <br>
+                Level 1 Capstone Project: Last updated 09 Sep 2021. <br>
+                <a href="credits.html" target="_blank">Credits to content used in this project</a>
+            </small>
+        </p>
+    </footer>
+
+
+    <!--JS local-->
+    <script src="js/NavHeroFooterScript.js"></script>
+    <script src="js/MainCartScript.js"></script>
+    <script src="js/CatalogueScript.js"></script>
+    <script src="js/GetInTouchScript.js"></script>
+
+</body>
+
+</html>

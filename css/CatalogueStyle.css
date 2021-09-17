@@ -1,0 +1,362 @@
+/*customize the container for catalogue.*/
+#ID_CatalogueContainer {
+    background-color: white;
+    padding: 20px 5%;
+    margin: 0 auto;
+    min-height: 150vh;
+    /*so that the animation of display categories in JQeary is smoother*/
+}
+
+
+/*page heading*/
+#ID_PageHeading {
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(1, 19, 19);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*--------------------------------------DISPLAY DROP DOWN MENU--------------------------------------*/
+
+/*CONTAINER FOR DROP DOWN MENU*/
+#ID_DropDownMenu_Container {
+    margin: 20px;
+    position: relative;
+    left: calc(50vw - 210px);
+    width: 230px;
+}
+
+/*label with event listener and displays category being viewed*/
+#ID_DropDownMenu_Container label {
+    width: 230px;
+    background-color: teal;
+    padding: 5px 10px;
+    color: white;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/*icon inside the label*/
+#ID_DropDownMenu_Container i {
+    margin-right: 10px;
+    color: rgb(175, 224, 224);
+}
+
+/*icon inside the menu links*/
+#ID_DropDownMenu_Container ul li i {
+    margin-right: 10px;
+    color: rgb(6, 161, 161);
+}
+
+/*Style the menu drop down panel*/
+#ID_DropDownMenu_Container ul {
+    padding: 0;
+    margin-top: 0;
+    display: none;
+}
+
+/*Style the Menu items*/
+#ID_DropDownMenu_Container li {
+    list-style-type: none;
+    background-color: rgb(173, 219, 219);
+    transition: background-color .5s;
+    width: 230px;
+    padding: 5px 10px;
+    margin: 1px 0;
+    cursor: default;
+}
+
+/*Style the Menu items on hover*/
+#ID_DropDownMenu_Container li:hover {
+    background-color: rgb(133, 182, 182);
+
+}
+
+
+
+
+/*--------------------------------------VEHICLES CATALOGUE SECTION--------------------------------------*/
+
+
+/*VEHICLES CATALOGUE SECTION*/
+
+/*heading showing year category*/
+.Cls_YearHeading {
+    display: block;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 100px;
+    color: teal;
+}
+
+
+
+/*vehicle containers*/
+.Cls_Vehicles {
+    transform: scale(1);
+    transition: transform .5s;
+
+    border-top: 10px solid teal;
+    margin: 12px 4px;
+    color: whitesmoke;
+    object-fit: scale-down;
+    padding: 0;
+    min-width: 250px;
+    max-width: 310px;
+
+}
+
+/*colour contrasting for visibility*/
+.DetailsPreview hr {
+    background-color: rgb(90, 158, 158);
+}
+
+
+/*Zoom effect for the hover*/
+.Cls_Vehicles:hover {
+    transform: scale(1.05);
+    transition: transform .5s;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+}
+
+/*Customise multiple image/thumbnail shapes*/
+/*Set thumbnails width*/
+.img-thumbnail {
+    background-color: transparent;
+    border: none;
+    background-color: rgb(183, 206, 206);
+    background-clip: border-box;
+    border-radius: 0;
+
+}
+
+
+/*Styling for details preview part of the car images */
+.DetailsPreview {
+    width: 100%;
+    background-color: teal;
+}
+
+/*styling for the cars names*/
+.Cls_CarName {
+    font-weight: 400;
+}
+
+/*custimize the more details button*/
+.btn-outline-light {
+    border-radius: 0;
+}
+
+/*custimize the more details button on hover*/
+.btn-outline-light:hover {
+    background-color: rgb(183, 206, 206);
+    border: 1px solid rgb(183, 206, 206);
+}
+
+/*Hide the extra text at first*/
+.Cls_MoreText {
+    display: none;
+}
+
+
+/*--------------------------------------------- IN-CART VISUAL INDICATIONS---------------------------------------------*/
+
+
+/*Visual indication if a car is (added) in the cart*/
+.Cls_IsVehicleInCart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+}
+
+/*Visual indication if a car is in the cart*/
+.Cls_VehicleAddedToCart {
+    visibility: visible;
+    transition: visibility .5s;
+}
+
+/*---------------------------------------------HOVER TABLE (LIST)----------------------------------------------*/
+
+/*padding around table*/
+.Cls_TableListContainer {
+    padding: 10px 40px;
+}
+
+/* Hover table container*/
+#ID_TableContainer {
+    padding: 20px 3%;
+    
+    margin: 0;
+    border-top: 1px solid rgb(206, 206, 206);
+}
+
+/*heading labels*/
+#ID_HoverTableSection h4 {
+    width: 100%;
+    padding: 40px 15px;
+    background-color: rgb(6, 112, 112);
+    color: rgb(219, 215, 215);
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+/*Customise the section containing the table*/
+#ID_HoverTableSection {
+    background-color: rgb(45, 66, 66);
+    padding-bottom: 40px;
+    margin: 0 auto;
+    border-radius: 2px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/*Make ID_HoverTableSection hover effect*/
+tr:hover {
+    background-color: rgb(77, 90, 90);
+    cursor: pointer;
+}
+
+/* expand the table's widht to responsively fit the screen*/
+table {
+    width: 100%;
+}
+
+/*add boarder for easier visibility*/
+td,
+th {
+    border-bottom: 1px solid rgba(97, 96, 96, 0.5);
+    padding: 4px;
+}
+
+/*make tablke header uppercase*/
+th {
+    text-transform: uppercase;
+}
+
+
+
+/*--------------------------------------CONVENIENCE NAVIGATION BUTTONS---------------------------------------------*/
+
+
+
+/*Container for convenience Previous and Next navigation*/
+#ID_PrevNextContainer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+/*Convenience Previous and Next navigation*/
+#ID_PrevCategory,
+#ID_NextCategory {
+    font-size: 35px;
+    color: rgb(122, 136, 136);
+    transform: scale(1);
+    transition: colour .5s, transform .5s;
+    margin: 0 8px;
+}
+
+/*Display text when hover*/
+#ID_PrevCategory span,
+#ID_NextCategory span {
+    position: relative;
+    font-size: 30%;
+    top: -10px;
+    padding: 2px 5px;
+    background-color: teal;
+    color: white;
+    border-radius: 10px;
+    /*visibility: hidden;*/
+}
+
+/*Hover on the <i> of previous and Next navigation*/
+#ID_PrevCategory:hover,
+#ID_NextCategory:hover {
+    color: teal;
+    transform: scale(1.4);
+    transition: .5s;
+    cursor: pointer;
+}
+
+/*Caption's Prev span starts hiden then visible when hover*/
+.Cls_CaptionPrev {
+    /*margin-left: -2px;*/
+    right: 50px;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* class to display captions on hover*/
+.Cls_ShowPrev {
+    opacity: 1;
+    right: 5px;
+    transition: 1s;
+}
+
+/*Caption's Next span starts hiden then visible when hover*/
+.Cls_CaptionNext {
+    left: 50px;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* class to display captions on hover*/
+.Cls_ShowNext {
+    opacity: 1;
+    left: 2px;
+    transition: 1s;
+}
+
+/*WHen starting hidden, it makes the display load smoother by hidding the loading/populating moment unti the show() part*/
+section.Cls_ShowYear2021,
+section.Cls_ShowYear2020,
+section.Cls_ShowYear2019 {
+    visibility: hidden;
+}
+
+
+
+/*--------------------------------------------------FOOTER-----------------------------------------------------*/
+
+
+/*Styling for the footer*/
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    color: lightslategray;
+}
+
+
+
+/*----------------------------------------------SMALLER DISPLAYS----------------------------------------------*/
+
+/*For smaller/mobile creens*/
+@media (max-width:800px) {
+
+    /*Adjust to align left positioning for small displays*/
+    #ID_DropDownMenu_Container {
+        left: calc(50vw - 150px);
+
+    }
+
+    /*padding around table*/
+    .Cls_TableListContainer {
+        padding: 5px;
+    }
+
+    /*heading labels*/
+    #ID_HoverTableSection h4 {
+         font-size: 1.4rem;
+    }
+}

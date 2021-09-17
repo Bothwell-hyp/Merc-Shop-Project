@@ -1,0 +1,427 @@
+/*-------------------------------------------BOOTSTRAP CUSTOMIZING------------------------------------------------*/
+
+/*remove marginds and padding for edge-to-edge design in grid classes*/
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-md-3 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*customize bootsrap row which contains cart item (car)*/
+.Cls_CarRow_Customized {
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+    margin-bottom: 60px;
+    background-color: rgba(245, 245, 245, 0.808);
+    border: 1px solid rgb(102, 141, 141) !important;
+    border-top: 1px solid rgb(102, 141, 141) !important;
+    border-radius: 5px;
+    height: 80%;
+    overflow: hidden;
+}
+
+
+/*-------------------------------------------------------- REMARK WHEN CART PAGE IS EMPTY-------------------------------*/
+/*Message when cart is found empty*/
+.Cls_EmptyCartRemark {
+    color: rgb(75, 74, 74);
+    text-align: center;
+    font-size: 1.2rem;
+
+    position: relative;
+    top: 50px;
+
+    display: none;
+
+}
+
+/*------------------------------------------------------IMAGE AREA--------------------------------------------------*/
+
+/*Customize image class, thumbnail*/
+.Cls_Imagecontainer .img-thumbnail {
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+/*------------------------------------------------------CART DETAILS AREA--------------------------------------------------*/
+
+/*Main container encompasing everything.*/
+#ID_MainContainer {
+    background-color: white;
+    padding: 20px 3%;
+    margin: 0 auto;
+    min-height: 80vh;
+    padding-bottom: 150px;
+}
+
+
+
+/*Cart Container, Hidden ensures content to load out of sight, and then JS will show after it's all done*/
+#ID_CartContainer {
+    visibility: hidden;
+    padding-top: 40px;
+}
+
+
+
+/*---------------------------------------------------------- 3 COLUMN HEADINGS ---------------------------------------------*/
+
+/*Container for heading, which then gets sticky at the top*/
+.Cls_HeadingTop {
+    background-color: teal;
+    position: sticky;
+    top: 30px;
+    z-index: 5;
+    padding: 1px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+
+/*The h3 heading text*/
+#ID_PageHeading {
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(0, 43, 43);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*horizontal line under heading*/
+.Cls_HeadingTop hr {
+    margin-top: 0;
+    background-color: rgb(200, 207, 214);
+}
+
+
+
+/*----------------------------------------------------------COLUMN HEADINGS FOR MOBILE---------------------------------------------*/
+
+/*COlumns headers styling*/
+.Cls_ColumnHeaders {
+    background-color: rgb(72, 128, 128);
+    padding: 5px 10px;
+    color: white;
+
+    z-index: 5;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-weight: lighter;
+    margin: 2px 0;
+ 
+}
+
+.Cls_3DetailColumnContainers .Cls_ColumnHeaders{
+    cursor: pointer;
+}
+
+
+/*-------------------------------STYE AND POSITIONING OF COLUMNS (CAR DETAILS) CONTENTS----------------------------*/
+
+/*customize bootstrap col*/
+.Cls_CustomizeCol {
+    float: left;
+    top: 0;
+    min-width: 280px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/*Fillup within the available width*/
+/*.Homework: Cls_CustomizeCol:not(:first) 
+wouldnt work as did in JS for column hearders, 
+though removed the code coz this achieves 
+what i wanted*/
+.Cls_3DetailColumnContainers {
+width: 33%;
+}
+
+/*Style the vehicle image*/
+.Cls_Imagecontainer {
+    padding: 5px 0;
+}
+
+/*height of content box*/
+.Cls_Detail {
+    height: 261px;
+    margin-bottom: 0;
+}
+
+/*span min-width for alignment*/
+#ID_CartContainer span:not(.Cls_infoSpan) {
+    display: inline-block;
+    min-width: 75px;
+    font-weight: 300;
+}
+
+/*Style for the spans containing the info */
+#ID_CartContainer .Cls_infoSpan {
+    font-weight: 400;
+}
+
+/*bottim div styling for visual benefit during animation*/
+.Cls_VisualAid {
+    border-bottom: 4px solid rgb(85, 114, 114);
+    margin-bottom: 15px;
+}
+
+
+
+
+/*adjust button size and position*/
+#ID_CartContainer button {
+    margin-top: 20px;
+    padding: 2px 5px;
+}
+
+/*for visual meaningfulness*/
+.Cls_TotalSumBorder {
+    min-width: none;
+    border-bottom: 1px dotted rgb(94, 94, 94);
+}
+
+/*styling for visual emphasis*/
+.Cls_SubtotalField {
+    font-weight: 400;
+    color: teal;
+
+}
+
+
+
+
+/*-------------------------------------------------- DELETE ITEM BUTTON AREA-----------------------------------------------------*/
+/*Most carts dont have a button to remove and clear all items at once, only one by one*/
+
+
+/*container for each item's delete button*/
+.Cls_DeleteItemContainer {
+    border-top: 1px solid rgb(184, 182, 182);
+    width: 100%;
+    text-align: right;
+    padding: 3px 15px;
+}
+
+/* styling for the delete button*/
+.Cls_DeleteItemContainer button {
+    margin-top: 0px;
+    margin-right: 0px;
+    background-color: rgb(122, 18, 18);
+}
+
+/*keep the button in theme red after clicking*/
+.Cls_DeleteItemContainer button:focus {
+    background-color: rgb(122, 18, 18);
+}
+
+
+/*--------------------------------------------------------BOTTOM SECTION, GRANDTOTALAND CONFIRM -------------------------------*/
+
+
+
+/*bottom section that shows the cart's totals and to confirm order*/
+.Cls_GrandTotalRow {
+    margin-top: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 80px;
+}
+
+/*the confirm button container, emphatically styled and positioned*/
+.Cls_ConfirmOrderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    float: right;
+    min-width: 220px;
+    border: 1px solid teal;
+    padding: 0 10px !important;
+    padding: 40px 0;
+    width: 250px;
+    height: 80px;
+}
+
+/*the grand total container, emphatically styled and positioned*/
+.Cls_GrandTotalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: teal;
+    color: white;
+    font-size: 1.2rem;
+    height: 80px;
+    border-top-right-radius: 10px;
+    min-width: 280px;
+    width: 300px;
+    height: 80px;
+    float: right;
+
+}
+
+/*Confrim Button inside the Cls_ConfirmOrderContainer*/
+.Cls_ConfirmOrderContainer button {
+    position: relative;
+    bottom: 15%;
+    font-size: 1.2rem;
+    min-width: 200px;
+}
+
+/*When order is successfuly confirmed, but keep hidden initially*/
+.Cls_OrderConfirmed {
+    float: right;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    height: 80px;
+    min-width: 280px;
+    width: 300px;
+    padding-left: 15px;
+    padding-top: 8px;
+
+    display: none;
+    background-color: rgb(255, 255, 255);
+    color: teal;
+    border: 1px solid grey;
+    border-bottom: 5px solid grey;
+    border-bottom: 5px solid grey;
+    border-radius: 5px;
+
+}
+
+/*-------------- ORDER SUCCESSFUL - VISUAL INDICATION */
+
+/*Styling for green tick that will show 
+in replacement of delete button. Indicates
+this item was successfully order */
+#ID_CartContainer span.Cls_CartItemSuccessful{
+    float: right;
+    font-size: 2rem;
+    color: green;
+    margin-top: 10px;
+    display: none;
+}
+
+
+/*--------------------------------------------------COUPON MODAL---------------------------------------------------*/
+
+/*styling for text displayed on coupon modal form*/
+#ID_ApplyCouponForm p {
+    text-align: justify;
+}
+
+/*styling emphasis on coupon type awarded*/
+#ID_CouponType {
+    color: teal;
+    font-weight: 900;
+}
+
+/*together with the JQ animations, manually recreating the bootstrap .fade class similar effect on modal*/
+.modal {
+    background-color: none !important;
+    opacity: 0;
+}
+
+/*pointer to signify clickable*/
+.Cls_CouponTag {
+    cursor: pointer;
+}
+
+
+/*--------------------------------------------------FOOTER-----------------------------------------------------*/
+
+
+/*Styling for the page footer*/
+footer {
+    background-color: rgb(8, 10, 10);
+    text-align: center;
+    padding: 10px;
+    color: lightslategray;
+}
+
+
+/*------------------------------------------------------ADJUST FOR LESSER DESKTOP WIDTHS-----------------------------------------------------*/
+
+/*thecart detail columns wont fit horizontally, so best adjust that they stack up above each other*/
+@media (max-width:1320px) {
+
+    /*customize bootstrap col*/
+    .Cls_CustomizeCol {
+        float: none;
+        display: block;
+        width: 100%;
+        top: 0;
+        min-width: 280px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+
+    /*WHen on smaller display, provisionally hide all other tabs/columns, and toggle show when user clicks them*/
+    .Cls_Detail {
+        display: none;
+    }
+
+    /* when in smaller display, only this class (COST column) will display*/
+    .Cls_DefaultOpenForMobile {
+        display: block;
+    }
+
+
+    
+    
+    /*-------------------------------------- DELETE BUTTON RE-ALIGNMENT*/
+
+    /*Alignment of delete button*/
+    .Cls_DeleteItemContainer button {
+        margin-right: 0px;
+    }
+
+    /*Container: Alignment of delete button*/
+    .Cls_DeleteItemContainer {
+        padding: 3px 3px;
+    }
+}
+
+
+/*----------------------------------------------------------SMALLER MOBILE SCREENS--------------------------------------------------*/
+@media (max-width:630px) {
+
+    /*adjust position and style for the grand total box*/
+    .Cls_GrandTotalContainer {
+        float: none;
+        width: 100%;
+        border-top-left-radius: 10px;
+    }
+
+    /*adjust position and style for Cls_OrderConfirmed box*/
+    .Cls_OrderConfirmed {
+        float: none;
+        width: 100%;
+    }
+
+    /*adjust position and style for the confirm order box*/
+    .Cls_ConfirmOrderContainer {
+        float: none;
+        width: 100%;
+    }
+
+
+}
+

@@ -1,0 +1,300 @@
+/* --------------------------------------------------------------------------
+NOTE:
+AS SHOWN, INSTEAD OF IDs, MAJORITY WILL BE CLASSES FOR DYNAMIC CHANGING IN JS
+FOR THE SAKE OF SPECIFITY, EXCEPT FOR ELEMENTS THAT WONT NEED/BE DYNAMICALLY 
+CHANGED.
+
+STAND-BY IS WHEN THE PANEL IS HIDEN, FULL VIEW IS WHEN ITS PULLED OUT INTO VIEW
+------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------DESKTOP STANDBY & FULL VIEW-----------------------------------------------*/
+
+/* #ID_GetInTouchPanel: CONTAINER ON STANDBY, styling and positioning*/
+.Cls_GetInTouchPanel {
+    position: fixed;
+    bottom: 5vh;
+    right: -550px;
+    z-index: 10;
+    height: 230px;
+    max-width: 580px;
+    transform: scale(1);
+    /*Changed the line below from : transition: transform .5s, right 1.5s; 
+    for smooth sliding reasons. transition right 1.5s is now being
+    handled in JS. because leaving it here would allow the problem
+    to exist on document load till user clicks get-in-touch-panel where 
+    there's controlling code resides.*/
+    transition: transform .5s;
+    border-radius: 10px 0 0 10px;
+    border: 4px solid teal;
+    border-right: none;
+}
+
+
+/*Set float and height of contents to align them horizontally*/
+/*#ID_Standby, #ID_OurContactDetails, #ID_YourContactDetails, #ID_ContactContainer*/
+.Cls_FloatHeight {
+    float: left;
+    height: 100%;
+
+}
+
+
+
+/*---------------------------STANDBY POSITION BY THE SIDE EGDE OF THE SCREEN-------------------------------------*/
+
+
+/*#ID_Standby: The STANDBY, which will get clicked and then extend into full width view*/
+.Cls_Standby {
+    /*The standby will be on the left hand side, 
+    then get in touch container on the right*/
+    width: 95px;
+    background-color: teal;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+/*#ID_GetInTouchPanel: Standby panel on hover: */
+.Cls_GetInTouchPanel_Hover:hover {
+    right: -540px;
+    transform: scale(1.1);
+    transition: transform .5s, right 1.5s !important;
+}
+
+
+/*#ID_Standby i: Mobile Phone Icon*/
+.Cls_Standby_fa-mobile {
+    position: relative;
+    left: 3px;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/*#ID_Standby .Tel phone icon (cue icon) */
+.Cls_Standby_fa-phone-alt {
+    position: relative;
+    left: 3px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 1;
+    transition: opacity .5s;
+
+}
+
+/*#ID_Standby p: side box text and rotation*/
+.Cls_Standby_p {
+    position: relative;
+    left: -15px;
+    padding: 10px 0px;
+    transform: rotate(270deg);
+    font-weight: 600;
+    color: rgb(181, 226, 226);
+}
+
+
+
+/*-------------------THE FOLLOWING DONT NEED DYNAMIC CHANGING IN JS, SO WILL BE USED AS IDs-------------------*/
+
+/*put a shade around panel to mark the edges*/
+#ID_GetInTouchPanel {
+    box-shadow: -1px -1px 0px rgb(133, 150, 150),
+        -1px 1px 0px rgb(133, 150, 150);
+}
+
+/*#ID_OurContactDetails: CONTAINER AT FULL WIDTH VIEW*/
+#ID_OurContactDetails {
+    background-color: rgb(40, 44, 44);
+    color: rgb(196, 192, 192);
+    padding: 10px;
+    min-width: 240px;
+}
+
+/*#ID_OurContactDetails i: positioning and look*/
+#ID_OurContactDetails i {
+    margin-right: 5px;
+    color: teal;
+}
+
+/*font appearance*/
+#ID_OurContactDetails p {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/*heading styling*/
+#ID_OurContactDetails h6 {
+    color: rgb(17, 158, 158);
+    font-weight: 400;
+
+}
+
+/*cursor to indicate clickable lick*/
+#ID_OurEmail,
+#ID_OurTel {
+    cursor: pointer;
+}
+
+/*hover effect to highlight for user*/
+#ID_OurEmail:hover,
+#ID_OurTel:hover {
+    color: rgb(226, 221, 221);
+}
+
+/*YOUR CONTACT DETAILS SIDE*/
+#ID_YourContactDetails {
+    background-color: rgb(40, 44, 44);
+    width: 40%;
+    min-width: 240px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+/*heading styling*/
+#ID_YourContactDetails h6 {
+    font-weight: 400;
+    color: rgb(17, 158, 158);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/*spacing and ordering*/
+#ID_YourContactDetails div {
+    margin-left: 10px;
+}
+
+/*spacing and ordering*/
+#ID_YourContactDetails input {
+    margin: 2px 0;
+
+}
+
+/*spacing and appearance of buttons*/
+#ID_YourContactDetails button {
+    margin-top: 8px;
+}
+
+
+
+/*----------------------------------------------MOBILE DISPLAY MODE---------------------------------------------*/
+
+
+
+@media (max-width:605px) {
+
+    /* (1) ------------------------------STANDARD  MOBILE VIEW CODE*/
+
+    /*Side Standby box on hover  #ID_GetInTouchPanel*/
+    .Cls_GetInTouchPanel_Mob_Hover:hover {
+        right: -40px;
+    }
+
+
+
+    /* (2) ------------------------------------------ MOBILE STANDBY:
+            BELOW ARE CLASSES TO APPLY (in JQuery GetInTouch.js) 
+            FOR MOBILE STANDBY----------*/
+
+    /*hide contact details section in preview: #ID_ContactContainer*/
+    .Cls_ContactContainer_Mob_Standby {
+        display: none;
+    }
+
+    /*Adjust container for fullview  on mobile: #ID_GetInTouchPanel */
+    .Cls_GetInTouchPanel_Mob_Standby {
+        width: min-content;
+        background: teal;
+        transform: scale(1);
+
+        right: -70px;
+        transition: transform .5s, right .5s;
+    }
+
+
+
+
+    /* (3) --------------------------------------------MOBILE FULL VIEW:    
+            BELOW ARE THE CLASES TO APPLY (in JQuery GetInTouch.js) 
+            WHEN CLICKED FOR MOBILE FULL VIEW---*/
+
+
+    /*Adjust container for fullview  on mobile: #ID_GetInTouchPanel */
+    .Cls_GetInTouchPanel_Mob_FullView {
+        height: max-content;
+        width: min-content;
+        background: teal;
+        max-width: 500px;
+        transform: scale(1);
+        transition: transform .5s, right 1s;
+        right: -234px;
+    }
+
+    /*adjust preview box dimensions: #ID_Standby*/
+    .Cls_Standby_Mob_FullView {
+        height: max-content;
+        width: 100%;
+
+    }
+
+    /*adjust preview p positioning and orientation for mobile:  #ID_Standby p*/
+    .Cls_Standby_Mob_Fullview_p {
+        transform: none;
+        left: 0;
+        margin-left: 10px;
+    }
+
+    /*Adjust icons positioning for mobile: #ID_Standby i*/
+    .Cls_Standby_Mob_Fullview_fa-mobile {
+        margin-bottom: 10px;
+        padding: 0;
+        left: 0;
+        margin-left: 10px;
+    }
+
+    /* #ID_Standby .fa-phone-alt: adjust positioning of 
+    cue icon - the phone icon that shows in preview then hides:
+     #ID_Standby .fa-phone-alt*/
+    .Cls_Standby_Mob_FullView_fa-phone-alt {
+        position: relative;
+        left: 5px;
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /*dispable floating to allow block display of the contact details, 
+    one over the other to fit on mobile:  #ID_ContactContainer*/
+    .Cls_ContactContainer_Mob_Fullview {
+        float: none;
+        display: block;
+    }
+}
+
+
+
+
+/*---------------------------------------ACTUATORS AT VERY BOTTOM FOR CASCADENCE-------------------------------*/
+
+
+/*Class to toggle panel view and hiding*/
+.Cls_ShowFullView {
+    right: 0;
+    transition: right 1.5s;
+}
+
+/*Toggle hide/show of cue telephone icon*/
+.CueIconHide {
+    opacity: 0;
+    transition: .5s;
+}
+
+@media (max-width:605px) {
+    /*Toggle hide/show of cue telephone icon, but without 
+    transition because on mobile it fades out too slow*/
+.CueIconHide {
+    opacity: 0;
+    transition: 0s;
+}
+}

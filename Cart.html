@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Cart</title>
+    <meta charset="utf-8">
+    <!--Resposive meta, cater for mobile viewports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--FONT AWESOME--------->
+    <!--FA Icons-->
+    <script src="https://kit.fontawesome.com/b69c959b3b.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome - make it load quicker - Got this from: https://stackoverflow.com/a/35880730/16333159-->
+    <link href='https://use.fontawesome.com/releases/v5.1.0/css/all.css' rel='stylesheet' type='text/css'>
+
+    <!--JQuery--------->
+    <!--Google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!--Popper (Using this for Modal)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!--Bootstrap (Using this for Modal)-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--CSS--------->
+    <!-- Link to bootstrap 4.5.2-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--Stylesheet local-->
+    <link type="text/css" rel="stylesheet" href="css/navStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/heroStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/CartStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/GetInTouchStyle.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+
+    <!--MAIN NAVIGATION MENU START-->
+    <nav>
+        <!--text in span meant for mobile displays, for intuitive navigation-->
+        <label id="ID_Logo" title="Click on logo go to home page">Merc-Shop<span> - Cart</span> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Team.html">Our team</a></li>
+            <li><a href="Catalogue.html"><i class="far fa-check-circle Cls_CatalogueProgressIcon"></i> Catalogue</a>
+            </li>
+            <li><a href="Shipping.html"><i class="far fa-check-circle Cls_ShippingProgressIcon"></i> Shipping</a></li>
+            <!-- Gap between </i> <span> below is intentional, insteaad of using margin in css-->
+            <li id="ID_CartMenu" class="Cls_active" title="Cart Total: R0.00"><a href="Cart.html"> <i
+                        class="far fa-check-circle Cls_OrderConfirmProgressIcon"></i> <i
+                        class="fas fa-shopping-cart"></i>
+                    <span>Cart ..</span></a></li>
+        </ul>
+        <label id="ID_MobileMenu">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <!--MAIN NAVIGATION MENU END-->
+
+
+
+    <!--HERO BANNER SECTION START-->
+    <section id="ID_HeroBanner">
+        <div class="BackgroundDIsplay Active"></div>
+        <div class="BackgroundDIsplay InActive"></div>
+
+        <div id="ID_HeroContent">
+            <div class="row">
+
+                <div class="col-md" id="HeroIntroSideContainer">
+                    <div class="border">
+                        <h1 id="ID_IntroHeading">You Deserve <br>Nothing Less.</h1>
+                        <h4 id="SiteName">The Merc-shop</h4>
+                        <p id="ID_Motto">For the merc treats & delights.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md" id="HeroGetStartedSideContainer">
+                    <div>
+                        <!--the divider image is to maintain margin and height for the keyfob animation-->
+                        <button id="ID_GetStartedBtn" class="btn btn-primary"
+                            title="Review Cart below and confirm your order.">
+                            <img src="images/keyfob.png"><img id="ID_Devider" src="images/devider.png">
+                            <span>ALMOST DONE!</span></button>
+                        <!--We're now on getting started-->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- END OF HERO BANNER SECTION-->
+
+
+
+
+    <!------------------------------------MAIN PAGE CONTENT : DYNAMICALLY ADDED FROM JS--------------------------------------------------->
+
+    <!-- CART SECTION-->
+    <div class="Cls_HeadingTop">
+        <h3 id="ID_PageHeading">Your Deluxe Cart.</h3>
+        <hr>
+    </div>
+
+    <section class="" id="ID_MainContainer">
+        <div id="ID_CartContainer">
+            <!--CART ROWS AND COLUMNS WILL LOAD IN HERE, USING THE BOOTSTRAP GRID-->
+
+        </div>
+    </section>
+    <!-- END VEHICLES CATALOGUE SECTION-->
+    <!-- MAIN PAGE CONTENT END-->
+
+
+
+    <!--------------------------------------------------- BOOTSTRAP MODAL --------------------------------------------------------->
+    <!--Got and learnt this code on https://www.w3schools.com/bootstrap4/bootstrap_modal.asp. Modified it to open from JQuery, css customisation, and recreating the fade effect-->
+    <!--The .fade class disables "clicking the backdrop or closing" action of the modal-->
+
+    <div class="modal" id="ID_CouponsModal">
+        <div class=" modal-dialogue modal-sm modal-dialog-centered" style="margin: auto;">
+            <div class="modal-content">
+
+                <form id="ID_ApplyCouponForm">
+                    <div class="modal-header">
+                        <h5>DISCOUNT COUPON: <br> <span class="Cls_CouponType" id="ID_CouponType"><b>FJN221</b></span>
+                            </h4>
+                            <button type="button" class="close" id="ID_ModalCancelClose">&times;</button>
+                    </div>
+
+                    <div class="modal-body ">
+
+                        <p>Dear <em><span id="ID_Purchaser">Purchaser</span></em>, <br> <br>
+                            Courtesy of the Merc-Shop team, we have awarded you our <span
+                                class="Cls_CouponType">checkout-promo</span>, a current special discount coupon for your
+                            every checkout, valued at a total
+                            <span class="Cls_TotalCouponValue"> - </span>, (<span class="Cls_CouponPercentage">3%</span>
+                            less on each vehicle+shipping in your cart.) <br><br>
+                            You can apply it now, or later by clicking the orange Coupon Tag <i
+                                class='fas fa-tag Cls_CouponTag'></i> located next to the coupon field.
+                        </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <span class="Cls_TotalCouponValue"> - </span><button type="submit"
+                            class="btn btn-primary Cls_SiteButtonTheme"> Apply Coupon</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!---------------------------------------------------END OF MAIN PAGE CONTENT --------------------------------------------------------->
+
+
+    <!--GET IN TOUCH PANEL-->
+    <section id="ID_GetInTouchPanel" class="shadow" hidden>
+        <!--The preveiw part-->
+        <div id="ID_Standby">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <p>Get In Touch</p>
+        </div>
+
+        <!--Display contact details and form in full when user clicks-->
+        <div id="ID_ContactContainer">
+            <div id="ID_OurContactDetails">
+                <h6>GET IN TOUCH: </h6>
+                <p>
+                    <i class="fas fa-phone-alt"></i> <span id="ID_OurTel" title="Click to call us now">(+27) 011 001 001
+                    </span><br>
+                    <i class="fas fa-envelope"></i> <span id="ID_OurEmail"
+                        title="Click to email us now">sales@merc-shop.co.za</span> <br>
+                    <i class="fas fa-map-marker-alt"></i> <span id="ID_OurAddress">2 Merc Dr, Parkmore, JHB</span> <br>
+                </p>
+            </div>
+
+            <!--Display contact details and form in full when user clicks-->
+            <form id="ID_YourContactDetails">
+                <h6>Or Let us call you back</h6>
+                <input type="text" id="GetInTouchName" placeholder="Fullname" maxlength="50" required><br>
+                <input type="tel" id="GetInTouchPhone" placeholder="Phone number" maxlength="50" required><br>
+                <input type="email" id="GetInTouchEmail" placeholder="Email" maxlength="50" required><br>
+                <button type="submit" class="btn btn-primary Cls_SiteButtonTheme">Submit</button> &nbsp;
+                <button type="button" class="btn btn-outline-danger" id="ID_GetInTouchCloseBtn">Close</button>
+            </form>
+        </div>
+    </section>
+    <!--GET IN TOUCH PANEL END-->
+
+
+    <footer>
+        <br>
+        <button id="ID_BackToTop" class="btn btn-outline-warning"><i class="fas fa-chevron-up"></i> Back to top
+        </button>
+        <br><br>
+        <p><small>
+                &copy; The Merc-shop, Johannesburg, South Africa. All Rights Reserved. <br>
+                Tel: (+27) 011 000 0000 | Email: info@themercshop.co.za | Social Media: @TheMerc-Shop <br>
+                <a href="mailto:bothwell.hyp@gmail.com">Created by Bothwell Dzawoma</a> <br>
+                Level 1 Capstone Project: Last updated 09 Sep 2021. <br>
+                <a href="credits.html" target="_blank">Credits to content used in this project</a>
+            </small>
+        </p>
+    </footer>
+
+
+    <!--JS local-->
+    <script src="js/NavHeroFooterScript.js"></script>
+    <script src="js/MainCartScript.js"></script>
+    <script src="js/CartScript.js"></script>
+    <script src="js/GetInTouchScript.js"></script>
+
+</body>
+
+</html>
