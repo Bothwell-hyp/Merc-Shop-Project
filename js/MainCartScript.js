@@ -37,7 +37,7 @@ function Fcn_SyncCart() {
         setTimeout(() => {
             alert("Hello, I'm Bothwell, Derrick." +
                 "\nThis website is a college project I did recently in my Web Development studies, so it's not actually selling you any cheap cars on Catalogue page, nor will any interactions or text you enter go anywhere." +
-                "\nIt's all demo functionaliies that I made. \n \nThanks for stopping by! \nYou can say hi on bothwell.hyp@gmail.com")
+                "\nIt's all demo functionaliies that I made. \n \nThanks for stopping by! \nYou can say hi @ bothwell.hyp@gmail.com")
         }, 1000);
         sessionStorage.setItem("NB", "Displayed");
     }
